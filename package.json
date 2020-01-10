@@ -1,0 +1,14 @@
+{
+  "name": "futureproofs-website-jekyll",
+  "version": "0.0.1",
+  "description": "Marketing website for Futureproofs, using the Jekyll builder",
+  "main": "index.js",
+  "author": "John Pettigrew / We Are Futureproofs Ltd",
+  "license": "SEE LICENSE IN <license.txt>",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0"
+  }
+}

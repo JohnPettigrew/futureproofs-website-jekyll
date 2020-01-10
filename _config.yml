@@ -1,0 +1,8 @@
+url: "https://www.wearefutureproofs.com"
+baseurl: ""
+title: "We Are Futureproofs"
+
+sass:
+    load_paths:
+        - _sass
+        - node_modules
