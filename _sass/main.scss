@@ -1,0 +1,44 @@
+body {
+  font-family: 'Lato', sans-serif;
+
+  .wrapper {
+    margin-top: 80px;
+  }
+}
+
+.content {
+  font-size: $custom-font-size;
+  color: $dark;
+}
+
+nav {
+  .navbar-brand {
+    img {
+      height: 40px;
+      width: 250px;
+    }
+  }
+
+  .navbar-toggler {
+    img {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  .navbar-nav {
+    a {
+      color: $dark;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    .dropdown-item {
+      &:hover {
+        background-color:$light;
+      }
+    }
+  }
+}
