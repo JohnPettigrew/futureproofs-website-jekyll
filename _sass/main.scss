@@ -7,13 +7,19 @@ body {
 
   #background {
     background: $white url("/images/hero-background-light.jpg") no-repeat 50% 0px;
-    background-size: 100% auto;
+    background-size: auto 100%;
     height: 100vh;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 0;
+  }
+
+  @media (min-width: map-get($grid-breakpoints, 'xl')) {
+    #background {
+      background-size: 100% auto;
+    }
   }
 
   .clear-navbar {
@@ -32,11 +38,11 @@ body {
 }
 
 .navbar-outer {
-  -webkit-transition: all 0.6s ease-out;
-  -moz-transition: all 0.6s ease-out;
-  -o-transition: all 0.6s ease-out;
-  -ms-transition: all 0.6s ease-out;
-  transition: all 0.6s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
   min-height: 80px;
   position: fixed;
   top: 0;
@@ -119,7 +125,7 @@ body {
     float:left;
     text-align: center;
     color: white;
-    padding: 20px;
+    padding: 10px 20px 20px 20px;
 
     &:nth-of-type(1) {
       background-color: lighten($primary, 15%)
@@ -131,6 +137,12 @@ body {
 
     &:nth-of-type(3) {
       background-color: lighten($primary, 5%)
+    }
+
+    img.icon {
+      width: 60px;
+      height: 60px;
+      filter: invert(100%);
     }
 
     h3 {
@@ -155,6 +167,39 @@ body {
       &#video {
         float: none;
         margin-top: 25px;
+      }
+    }
+  }
+}
+
+footer {
+  .branding {
+
+    .logo {
+      margin: 0 auto;
+    }
+
+    ul.social {
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        display: inline;
+        width: 40px;
+        height: 40px;
+        background-color: $gray-600;
+        border-radius: 20px;
+        padding: 10px;
+        margin: 10px;
+
+        img {
+          position: relative;
+          top: -2px;
+          left: 0;
+          width: 20px;
+          height: 20px;
+          filter: invert(100%);
+        }
       }
     }
   }
