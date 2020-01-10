@@ -32,7 +32,12 @@
         </article>
         <article class="col-3">
           <h3>Watch the video</h3>
-          <a id="video" class="btn btn-primary p-1" href="#"><img src="{{'/images/play-video.png'}}" width="200" height="113" alt="Video screenshot"></a>
+          <script src="https://fast.wistia.com/embed/medias/hwaxymlt5s.jsonp" async></script>
+          <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><span class="wistia_embed wistia_async_hwaxymlt5s popover=true popoverContent=link" style="display:inline;">
+            <a id="video" class="btn btn-primary p-1" href="#">
+              <img src="/images/play-video.png" width="200" height="113" alt="Video screenshot" />
+            </a>
+          </span>
         </article>
       </div>
     </section>
@@ -43,23 +48,5 @@
 
     {% include _footer.html %}
     {% include _page_scripts.html %}
-    <script>
-      function checkScroll() {
-        var startY = $('.navbar-outer').height(); //The point where the navbar changes in px
-
-        if ($(window).scrollTop() > startY) {
-          $('.navbar-outer').addClass("scrolled");
-        } else {
-          $('.navbar-outer').removeClass("scrolled");
-        }
-      }
-
-      if ($('.navbar-outer').length > 0) {
-        $(window).on("scroll load resize", function() {
-          checkScroll();
-        });
-      }
-    </script>
   </body>
-
 </html>

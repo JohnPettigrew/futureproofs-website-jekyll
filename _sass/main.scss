@@ -1,14 +1,19 @@
 body {
   font-family: 'Lato', sans-serif;
 
+  * {
+    z-index: 1;
+  }
+
   #background {
     background: $white url("/images/hero-background-light.jpg") no-repeat 50% 0px;
+    background-size: 100% auto;
     height: 100vh;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 0;
   }
 
   .clear-navbar {
@@ -54,11 +59,15 @@ body {
     }
 
     .navbar-nav {
-      a {
-        color: $dark;
+      li {
+        margin-left: 10px;
 
-        &:hover {
-          color: $primary;
+        a {
+          color: $dark;
+
+          &:hover {
+            color: $primary;
+          }
         }
       }
 
@@ -79,7 +88,7 @@ body {
 }
 
 .hero {
-  height: 85vh;
+  height: 82vh;
 
   h1, h2 {
     text-align: center;
@@ -88,6 +97,7 @@ body {
   h1 {
    font-size: $base-font-size * 5;
    margin-bottom: 30px;
+   font-weight: 700;
   }
 
   h2 {
@@ -117,6 +127,8 @@ body {
 
     h3 {
       font-size: 120%;
+      font-weight: 700;
+      margin-bottom: 20px;
     }
 
     p {
