@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-GB" }}">
+  {% include _head.html %}
+  <body>
+    <div id="background"></div>
+    {% include _navbar.html %}
+
+    <section class="wrapper clear-navbar hero d-flex align-items-center">
+      <div class="flex-fill">
+        <h1>Ditch that paper!</h1>
+        <h2>Control your proofs, improve your workflow</h2>
+      </div>
+    </section>
+
+    <section class="wrapper key-selling-points content">
+      <article class="col-3">
+        <h3>Consistent markup</h3>
+        <p>Some text goes here</p>
+        <a class="btn btn-primary" href="#">Find out more</a>
+      </article>
+      <article class="col-3">
+        <h3>Clear communication</h3>
+        <p>Some text goes here</p>
+        <a class="btn btn-primary" href="#">Find out more</a>
+      </article>
+      <article class="col-3">
+        <h3>Actionable insights</h3>
+        <p>Some text goes here</p>
+        <a class="btn btn-primary" href="#">Find out more</a>
+      </article>
+      <article class="col-3">
+        <h3>Watch the video</h3>
+        <a class="btn btn-primary" href="#"><img src="{{'/images/play-video.png'}}" width="200" height="113" alt="Video screenshot"></a>
+      </article>
+    </section>
+
+    <section class="wrapper content">
+      {{ content}}
+    </section>
+
+    {% include _footer.html %}
+    {% include _page_scripts.html %}
+  </body>
+</html>
