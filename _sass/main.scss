@@ -103,6 +103,14 @@ body {
   h2 {
    font-size: $base-font-size * 2;
   }
+
+  p {
+    margin-top: 50px;
+
+    .cta {
+      font-size: 120%;
+    }
+  }
 }
 
 .key-selling-points {
