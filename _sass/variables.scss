@@ -1,4 +1,26 @@
-$white:    #fff;
+$white: #ffffff;
+$black: #1c1c1b;
+$red: #cd0000;
+$green: #0f9948;
+$blue: #3f91ce;
+$orange: #f0850e;
+
+$light-gray: #ecf0f1;
+$mid-gray: #8a8a8a;
+$dark-gray: #575757;
+$darkest-gray: #191919;
+
+$mid-orange: #f8d385;
+$light-orange: #fdf3e6;
+$mid-blue: lighten($blue, 25%);
+$light-blue: #d9e9f5;
+
+$primary: $blue;
+$secondary: $orange;
+$tertiary: $dark-gray;
+$info: $blue;
+
+$light: $light-gray;
 
 /* custom vars */
 $base-font-size: 20px;
