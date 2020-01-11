@@ -173,10 +173,16 @@ body {
 }
 
 footer {
-  .branding {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: $darkest-gray;
+  color: $white;
 
-    .logo {
-      margin: 0 auto;
+  .branding {
+    flex: 0 0 25%;
+
+    @media (max: map-get($grid-breakpoints, 'lg')) {
+      flex: 0 0 50%;
     }
 
     ul.social {
@@ -185,22 +191,79 @@ footer {
 
       li {
         display: inline;
-        width: 40px;
-        height: 40px;
-        background-color: $gray-600;
-        border-radius: 20px;
-        padding: 10px;
         margin: 10px;
 
-        img {
-          position: relative;
-          top: -2px;
-          left: 0;
-          width: 20px;
-          height: 20px;
-          filter: invert(100%);
+        a.btn-round {
+          border-radius: 20px;
+          padding: 10px;
+          width: 42px;
+          height: 42px;
+
+          img {
+            position: relative;
+            top: -3px;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            filter: invert(100%);
+          }
         }
       }
     }
+  }
+
+  .information {
+    flex: 0 0 25%;
+
+    ul {
+      padding-left: 0;
+      list-style: none;
+
+      a {
+        color: $mid-gray;
+      }
+    }
+
+    @media (max-width: map-get($grid-breakpoints, 'lg')) {
+      flex: 0 0 50%;
+
+      h4 {
+        text-align: right;
+      }
+
+      ul {
+        float: right;
+      }
+    }
+  }
+
+  .join-community {
+    flex: 0 0 40%;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    @media (max-width: map-get($grid-breakpoints, 'lg')) {
+      flex: 0 0 100%;
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    padding-top: 30px;
+  }
+}
+
+li {
+  img.arrow {
+    padding-right: 5px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: -1px;
+    margin-left: -5px;
+    filter: invert(100%);
   }
 }
