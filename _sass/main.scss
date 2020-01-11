@@ -121,6 +121,7 @@ body {
 
 .key-selling-points {
   article {
+    position: relative;
     background-color: $primary;
     float:left;
     text-align: center;
@@ -128,15 +129,75 @@ body {
     padding: 10px 20px 20px 20px;
 
     &:nth-of-type(1) {
-      background-color: lighten($primary, 15%)
+      background-color: lighten($primary, 20%);
+      flex: 0 0 0;
+      padding: 0;
+
+      @media (min-width: 1600px) {
+        flex: 0 0 16%;
+      }
     }
 
     &:nth-of-type(2) {
-      background-color: lighten($primary, 10%)
+      background-color: lighten($primary, 15%);
+      flex: 0 0 25%;
+
+      @media (max-width: map-get($grid-breakpoints, 'lg')) {
+        flex: 0 0 50%;
+      }
+
+      @media (min-width: 1600px) {
+        flex: 0 0 17%;
+      }
     }
 
     &:nth-of-type(3) {
-      background-color: lighten($primary, 5%)
+      background-color: lighten($primary, 10%);
+      flex: 0 0 25%;
+
+      @media (max-width: map-get($grid-breakpoints, 'lg')) {
+        flex: 0 0 50%;
+      }
+
+      @media (min-width: 1600px) {
+        flex: 0 0 17%;
+      }
+    }
+
+    &:nth-of-type(4) {
+      background-color: lighten($primary, 5%);
+      flex: 0 0 25%;
+
+      @media (max-width: map-get($grid-breakpoints, 'lg')) {
+        flex: 0 0 50%;
+      }
+
+      @media (min-width: 1600px) {
+        flex: 0 0 17%;
+      }
+    }
+
+    &:nth-of-type(5) {
+      background-color: $primary;
+      flex: 0 0 25%;
+
+      @media (max-width: map-get($grid-breakpoints, 'lg')) {
+        flex: 0 0 50%;
+      }
+
+      @media (min-width: 1600px) {
+        flex: 0 0 17%;
+      }
+    }
+
+    &:nth-of-type(6) {
+      background-color: darken($primary, 5%);
+      flex: 0 0 0;
+      padding: 0;
+
+      @media (min-width: 1600px) {
+        flex: 0 0 16%;
+      }
     }
 
     img.icon {
