@@ -96,7 +96,8 @@ body {
 }
 
 .hero {
-  height: 82vh;
+  height: calc(100vh - 140px);
+  min-height: 240px;
 
   h1 {
     text-align: center;
@@ -225,6 +226,25 @@ body {
         margin-top: 25px;
       }
     }
+  }
+}
+
+.features {
+  h2 {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  h3 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+
+  .summary {
+    width: 800px;
+    margin: 10px auto;
+    text-align: center;
   }
 }
 
