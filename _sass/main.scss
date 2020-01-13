@@ -1,6 +1,12 @@
-body {
-  font-family: 'Lato', sans-serif;
+@mixin transitions {
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
 
+body {
   * {
     z-index: 1;
   }
@@ -27,7 +33,6 @@ body {
   }
 
   .content {
-    font-size: $base-font-size;
     color: $dark;
   }
 
@@ -35,20 +40,24 @@ body {
     max-width: 1200px;
     margin: 0 auto 0 auto;
   }
+
+  img.arrow {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: -1px;
+    filter: invert(100%);
+  }
 }
 
 .navbar-outer {
-  -webkit-transition: all 0.4s ease-out;
-  -moz-transition: all 0.4s ease-out;
-  -o-transition: all 0.4s ease-out;
-  -ms-transition: all 0.4s ease-out;
-  transition: all 0.4s ease-out;
   min-height: 70px;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 50;
   border-bottom: 1px solid $mid-gray;
+  @include transitions;
 
   &.scrolled {
     background-color: $white;
@@ -72,6 +81,7 @@ body {
 
         a {
           color: $dark;
+          @include transitions;
 
           &:hover {
             color: $primary;
@@ -79,9 +89,24 @@ body {
         }
       }
 
-      .dropdown-item {
-        &:hover {
-          background-color:$light;
+      .dropdown-menu {
+        border: 1px solid $mid-gray;
+        border-radius: 0;
+        margin-top: 16px;
+        background-color: transparent;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+        @include transitions;
+
+        &.scrolled {
+          @include transitions;
+          background-color: $white;
+        }
+
+        .dropdown-item {
+          &:hover {
+            @include transitions;
+            background-color:$light;
+          }
         }
       }
     }
@@ -101,7 +126,7 @@ body {
 
   h1 {
     text-align: center;
-    font-size: $base-font-size * 3;
+    font-size: $font-size-base * 3;
     margin-bottom: 30px;
     font-weight: 700;
   }
@@ -123,71 +148,41 @@ body {
     text-align: center;
     color: white;
     padding: 10px 20px 20px 20px;
+    flex: 0 0 25%;
+
+    @media (max-width: map-get($grid-breakpoints, 'lg')) {
+      flex: 0 0 50%;
+    }
+
+    @media (min-width: 1600px) {
+      flex: 0 0 17%;
+    }
 
     &:nth-of-type(1) {
       background-color: lighten($primary, 20%);
-      flex: 0 0 0;
-      padding: 0;
-
-      @media (min-width: 1600px) {
-        flex: 0 0 16%;
-      }
     }
 
     &:nth-of-type(2) {
       background-color: lighten($primary, 15%);
-      flex: 0 0 25%;
-
-      @media (max-width: map-get($grid-breakpoints, 'lg')) {
-        flex: 0 0 50%;
-      }
-
-      @media (min-width: 1600px) {
-        flex: 0 0 17%;
-      }
     }
 
     &:nth-of-type(3) {
       background-color: lighten($primary, 10%);
-      flex: 0 0 25%;
-
-      @media (max-width: map-get($grid-breakpoints, 'lg')) {
-        flex: 0 0 50%;
-      }
-
-      @media (min-width: 1600px) {
-        flex: 0 0 17%;
-      }
     }
 
     &:nth-of-type(4) {
       background-color: lighten($primary, 5%);
-      flex: 0 0 25%;
-
-      @media (max-width: map-get($grid-breakpoints, 'lg')) {
-        flex: 0 0 50%;
-      }
-
-      @media (min-width: 1600px) {
-        flex: 0 0 17%;
-      }
     }
 
     &:nth-of-type(5) {
       background-color: $primary;
-      flex: 0 0 25%;
-
-      @media (max-width: map-get($grid-breakpoints, 'lg')) {
-        flex: 0 0 50%;
-      }
-
-      @media (min-width: 1600px) {
-        flex: 0 0 17%;
-      }
     }
 
     &:nth-of-type(6) {
       background-color: darken($primary, 5%);
+    }
+
+    &.padding {
       flex: 0 0 0;
       padding: 0;
 
@@ -209,7 +204,6 @@ body {
     }
 
     p {
-      font-size: 80%;
       margin-bottom: 50px;
     }
 
@@ -218,7 +212,9 @@ body {
         float: right;
         position: absolute;
         bottom: 0;
-        margin: 20px 20px 20px 0;
+        right: 20px;
+        margin: 20px 0;
+        padding-left: 1.2rem;
       }
 
       &#video {
@@ -245,6 +241,31 @@ body {
     width: 800px;
     margin: 10px auto;
     text-align: center;
+  }
+
+  .feature-card-set {
+    margin: 30px;
+
+    .card {
+      background-color: $light-blue;
+      border: none;
+      border-radius: 0;
+    }
+
+    .feature-image {
+      width: 40vw;
+      margin-left: 100px;
+      @include transitions;
+
+      &:hover {
+        transform: scale(1.1, 1.1);
+      }
+    }
+
+    .feature-text {
+      left: -100px;
+      padding: 20px;
+    }
   }
 }
 
@@ -298,6 +319,11 @@ footer {
       a {
         color: $mid-gray;
       }
+
+      img.arrow {
+        margin-left: -5px;
+        margin-right: 5px;
+      }
     }
 
     @media (max-width: map-get($grid-breakpoints, 'lg')) {
@@ -329,17 +355,5 @@ footer {
   .copyright {
     text-align: center;
     padding-top: 30px;
-  }
-}
-
-li {
-  img.arrow {
-    padding-right: 5px;
-    width: 30px;
-    height: 30px;
-    position: relative;
-    top: -1px;
-    margin-left: -5px;
-    filter: invert(100%);
   }
 }

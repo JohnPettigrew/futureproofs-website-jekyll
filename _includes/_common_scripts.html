@@ -7,8 +7,10 @@
 
     if ($(window).scrollTop() > startY) {
       $('.navbar-outer').addClass("scrolled");
+      $('.dropdown-menu').addClass("scrolled");
     } else {
       $('.navbar-outer').removeClass("scrolled");
+      $('.dropdown-menu').removeClass("scrolled");
     }
   }
 
