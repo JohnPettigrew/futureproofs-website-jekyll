@@ -249,31 +249,42 @@ body {
   }
 
   .feature-card-set {
-    margin: 30px;
+    margin: 30px 100px;
 
     .card {
-      background-color: $light-blue;
       border: none;
       border-radius: 0;
     }
 
     .feature-image {
-      width: 40vw;
       margin-left: 100px;
+      z-index: 0;
       @include transitions;
 
       &:hover {
-        transform: scale(1.1, 1.1);
+        transform: scale(1.05, 1.05);
       }
     }
 
     .feature-text {
-      left: -100px;
+      background-color: $light-blue;
+      margin-right: 100px;
       padding: 20px;
-      position: relative;
 
       .card-text {
         margin-bottom: 2em;
+      }
+    }
+
+    &:nth-of-type(even) {
+      .feature-image {
+        margin-left: 0;
+        margin-right: 100px;
+      }
+
+      .feature-text {
+        margin-left: 100px;
+        margin-right: 0;
       }
     }
   }
