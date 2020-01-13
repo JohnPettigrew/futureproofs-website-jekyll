@@ -41,6 +41,15 @@ body {
     margin: 0 auto 0 auto;
   }
 
+  a.button-bottom {
+    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    margin: 20px 0;
+    padding-left: 1.2rem;
+  }
+
   img.arrow {
     width: 30px;
     height: 30px;
@@ -126,21 +135,25 @@ body {
 
   h1 {
     text-align: center;
-    font-size: $font-size-base * 3;
+    font-size: 3rem;
     margin-bottom: 30px;
     font-weight: 700;
   }
 
   p {
-    margin-top: 50px;
+    margin-top: 30px;
 
     .cta {
-      font-size: 120%;
+      font-size: 1.2rem;
+      padding: 0.75rem 1.5rem;
     }
   }
 }
 
 .key-selling-points {
+  .row {
+    margin: 0;
+  }
   article {
     position: relative;
     background-color: $primary;
@@ -148,10 +161,11 @@ body {
     text-align: center;
     color: white;
     padding: 10px 20px 20px 20px;
-    flex: 0 0 25%;
+    flex: 0 0 50%;
 
-    @media (max-width: map-get($grid-breakpoints, 'lg')) {
-      flex: 0 0 50%;
+    @media (min-width: map-get($grid-breakpoints, 'lg')) {
+      flex: 0 0 25%;
+      max-width: 400px;
     }
 
     @media (min-width: 1600px) {
@@ -204,19 +218,10 @@ body {
     }
 
     p {
-      margin-bottom: 50px;
+      margin-bottom: 3em;
     }
 
     a {
-      &.button-bottom {
-        float: right;
-        position: absolute;
-        bottom: 0;
-        right: 20px;
-        margin: 20px 0;
-        padding-left: 1.2rem;
-      }
-
       &#video {
         float: none;
         margin-top: 25px;
@@ -265,6 +270,11 @@ body {
     .feature-text {
       left: -100px;
       padding: 20px;
+      position: relative;
+
+      .card-text {
+        margin-bottom: 2em;
+      }
     }
   }
 }
@@ -276,10 +286,10 @@ footer {
   color: $white;
 
   .branding {
-    flex: 0 0 25%;
+    flex: 0 0 50%;
 
-    @media (max: map-get($grid-breakpoints, 'lg')) {
-      flex: 0 0 50%;
+    @media (min-width: map-get($grid-breakpoints, 'lg')) {
+      flex: 0 0 25%;
     }
 
     ul.social {
@@ -310,7 +320,7 @@ footer {
   }
 
   .information {
-    flex: 0 0 25%;
+    flex: 0 0 50%;
 
     ul {
       padding-left: 0;
@@ -326,8 +336,8 @@ footer {
       }
     }
 
-    @media (max-width: map-get($grid-breakpoints, 'lg')) {
-      flex: 0 0 50%;
+    @media (min-width: map-get($grid-breakpoints, 'lg')) {
+      flex: 0 0 25%;
 
       h4 {
         text-align: right;
@@ -340,15 +350,15 @@ footer {
   }
 
   .join-community {
-    flex: 0 0 40%;
+    flex: 0 0 100%;
 
     ul {
       list-style: none;
       padding-left: 0;
     }
 
-    @media (max-width: map-get($grid-breakpoints, 'lg')) {
-      flex: 0 0 100%;
+    @media (min-width: map-get($grid-breakpoints, 'lg')) {
+      flex: 0 0 40%;
     }
   }
 
