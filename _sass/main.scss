@@ -54,6 +54,14 @@ body {
     font-weight: 700;
   }
 
+  .btn {
+    @include transitions;
+
+    &:hover {
+      transform: scale(1.1, 1.1);
+    }
+  }
+
   a.button-bottom {
     float: right;
     position: absolute;
@@ -312,7 +320,16 @@ body {
 }
 
 .testimonials {
-  background-color: $mid-gray;
+  height: 400px;
+  min-height: 240px;
+  width: 100%;
+  background: $mid-gray url("/images/testimonials-background.jpg") no-repeat center center;
+  background-size: 100% auto;
+
+  .content {
+    color: $white;
+  }
+
 }
 
 footer {
