@@ -26,32 +26,35 @@ body {
     margin: 0 auto 0 auto;
   }
 
-  h1 {
+  h1, h2 {
     text-align: center;
-    font-size: 3rem;
-    margin-bottom: 30px;
     font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  h1 {
+    font-size: 3rem;
   }
 
   h2 {
-    text-align: center;
-    margin-top: 50px;
+    margin-top: 30px;
     font-size: 2rem;
+  }
+
+  h3, h4 {
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 25px;
   }
 
   h3 {
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 25px;
     font-size: 1.5rem;
   }
 
   h4 {
     text-align: left;
-    margin-top: 10px;
-    margin-bottom: 25px;
     font-size: 1.2rem;
-    font-weight: 700;
   }
 
   .btn {
@@ -63,11 +66,9 @@ body {
   }
 
   a.button-bottom {
-    float: right;
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     right: 20px;
-    margin: 20px 0;
     padding-left: 1.2rem;
   }
 
@@ -77,6 +78,10 @@ body {
     position: relative;
     top: -1px;
     filter: invert(100%);
+  }
+
+  p, li {
+    padding: 0 0 10px 0;
   }
 }
 
@@ -156,19 +161,13 @@ body {
 
   #background {
     background: $white url("/images/hero-background-light.jpg") no-repeat 50% 0px;
-    background-size: auto 100%;
+    background-size: cover;
     height: 100vh;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 0;
-  }
-
-  @media (min-width: map-get($grid-breakpoints, 'xl')) {
-    #background {
-      background-size: 100% auto;
-    }
   }
 
   p {
@@ -287,6 +286,11 @@ body {
         h4 {
           text-align: right;
         }
+
+        .button-bottom {
+          right: auto;
+          left: 0;
+        }
       }
     }
 
@@ -297,11 +301,6 @@ body {
     .feature-image {
       margin-left: 100px;
       z-index: 0;
-      @include transitions;
-
-      &:hover {
-        transform: scale(1.1, 1.1);
-      }
     }
 
     .feature-text {
@@ -319,15 +318,28 @@ body {
   }
 }
 
+.customers {
+  padding: 30px;
+  background-color: $light-blue;
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
 .testimonials {
   height: 400px;
   min-height: 240px;
   width: 100%;
-  background: $mid-gray url("/images/testimonials-background.jpg") no-repeat center center;
-  background-size: 100% auto;
+  background: $mid-gray url("/images/testimonials-background.jpg") no-repeat;
+  background-size: cover;
 
   .content {
     color: $white;
+
+    h2 {
+      padding-top: 30px;
+    }
   }
 
 }

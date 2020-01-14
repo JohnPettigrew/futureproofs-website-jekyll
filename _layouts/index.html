@@ -5,7 +5,7 @@
   <body>
     {% include _navbar.html %}
 
-    <section class="wrapper clear-navbar hero d-flex align-items-center">
+    <section class="wrapper hero clear-navbar d-flex align-items-center">
       <div id="background"></div>
       <div class="flex-fill">
         <h1>Control your proofs,<br />
@@ -21,33 +21,34 @@
           <img src="/images/book.svg" class="icon" />
           <h3>Consistent markup</h3>
           <p>Simple, powerful markup that just works. Publish faster and improve your margin. Full 360° workflow includes everyone. No software to install – just needs a web browser!</p>
-          <p><a class="btn btn-dark button-bottom" href="#">See more <img src="/images/arrow-right-short.svg" aria-hidden="true" class="arrow" /></a></p>
+          <p class="mb-0 mt-0 pb-0"><a class="btn btn-dark button-bottom" href="#">See more <img src="/images/arrow-right-short.svg" aria-hidden="true" class="arrow" /></a></p>
         </article>
         <article>
           <img src="/images/people.svg" class="icon" />
           <h3>Clear communication</h3>
           <p>Upload and share PDF proofs securely with your team. Work simultaneously. Effective collaboration gets queries resolved quickly. Instant, accountable communication.</p>
-          <p><a class="btn btn-dark button-bottom" href="#">See more <img src="/images/arrow-right-short.svg" aria-hidden="true" class="arrow" /></a></p>
+          <p class="mb-0 mt-0 pb-0"><a class="btn btn-dark button-bottom" href="#">See more <img src="/images/arrow-right-short.svg" aria-hidden="true" class="arrow" /></a></p>
         </article>
         <article>
           <img src="/images/eye.svg" class="icon" />
           <h3>Actionable insights</h3>
           <p>Anticipate and avoid problems with real-time data for clear insight. Automated audit trails ensure you know what decisions were made. Management reports provide perspective for leaders.</p>
-          <p><a class="btn btn-dark button-bottom" href="#">See more <img src="/images/arrow-right-short.svg" aria-hidden="true" class="arrow" /></a></p>
+          <p class="mb-0 mt-0 pb-0"><a class="btn btn-dark button-bottom" href="#">See more <img src="/images/arrow-right-short.svg" aria-hidden="true" class="arrow" /></a></p>
         </article>
         <article>
           <img src="/images/play.svg" class="icon" />
           <h3>Watch the video</h3>
           <script src="https://fast.wistia.com/embed/medias/hwaxymlt5s.jsonp" async></script>
           <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><span class="wistia_embed wistia_async_hwaxymlt5s popover=true popoverContent=link" style="display:inline;">
-            <a id="video" class="btn btn-primary p-1" href="#">
+            <p class="mb-0 mt-0 pb-0"><a id="video" class="btn btn-primary p-1" href="#">
               <img src="/images/play-video.png" width="200" height="113" alt="Video screenshot" />
-            </a>
+            </a></p>
           </span>
         </article>
         <article class="padding"></article>
       </div>
     </section>
+    {% include _customers.html %}
 
     <section class="wrapper content features">
       <h2>Publish faster with Futureproofs</h2>
@@ -80,12 +81,7 @@
       </div>
     </section>
 
-    <section class="testimonials">
-      <div class="wrapper content">
-        <h2>Testimonials</h2>
-        <p>Stuff goes here</p>
-      </div>
-    </section>
+    {% include _testimonials.html %}
 
     {% include _footer.html %}
     {% include _common_scripts.html %}
