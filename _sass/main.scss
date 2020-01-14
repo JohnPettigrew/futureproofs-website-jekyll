@@ -262,7 +262,7 @@ body {
 
 .features {
   .summary {
-    width: 800px;
+    width: 900px;
     margin: 10px auto;
     text-align: center;
   }
@@ -273,12 +273,10 @@ body {
     &:nth-of-type(even) {
       .feature-image {
         margin-left: 0;
-        margin-right: 100px;
         order: 2;
       }
 
       .feature-text {
-        margin-left: 100px;
         margin-right: 0;
         order: 1;
         text-align: right;
@@ -299,12 +297,10 @@ body {
     }
 
     .feature-image {
-      margin-left: 100px;
       z-index: 0;
     }
 
     .feature-text {
-      margin-right: 100px;
       padding: 20px;
 
       .card-text {
@@ -328,17 +324,42 @@ body {
 }
 
 .testimonials {
-  height: 400px;
-  min-height: 240px;
+  height: 450px;
   width: 100%;
   background: $mid-gray url("/images/testimonials-background.jpg") no-repeat;
   background-size: cover;
 
   .content {
     color: $white;
+    text-align: center;
 
     h2 {
       padding-top: 30px;
+    }
+
+    .quotes {
+      h5 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: $primary;
+        margin: 10px 0;
+      }
+
+      p {
+        color: $mid-gray;
+        font-size: 1rem;
+        min-height: 58px;
+      }
+
+      img {
+        border-radius: 40px;
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    .cta-button {
+      margin: 30px 0;
     }
   }
 
