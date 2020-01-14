@@ -61,7 +61,7 @@ body {
     @include transitions;
 
     &:hover {
-      transform: scale(1.1, 1.1);
+      transform: scale(1.1);
     }
   }
 
@@ -116,6 +116,7 @@ body {
 
         a {
           color: $dark;
+          padding-top: 15px;
           @include transitions;
 
           &:hover {
@@ -127,7 +128,7 @@ body {
       .dropdown-menu {
         border: 1px solid $mid-gray;
         border-radius: 0;
-        margin-top: 15px;
+        margin-top: 2px;
         background-color: transparent;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
         @include transitions;
@@ -151,6 +152,11 @@ body {
         height: 40px;
         width: 40px;
       }
+    }
+
+    .try-it-out {
+      position: relative;
+      top: -5px;
     }
   }
 }
@@ -298,6 +304,11 @@ body {
 
     .feature-image {
       z-index: 0;
+      @include transitions;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
 
     .feature-text {
@@ -346,7 +357,7 @@ body {
       }
 
       p {
-        color: $mid-gray;
+        color: $mid-blue;
         font-size: 1rem;
         min-height: 58px;
       }
@@ -440,6 +451,18 @@ footer {
 
     @media (min-width: map-get($grid-breakpoints, 'lg')) {
       flex: 0 0 40%;
+    }
+
+    input.btn {
+      border-radius: 0 0.2rem 0.2rem 0;
+    }
+
+    input[type='checkbox'] {
+      @include transitions;
+
+      &:hover {
+        transform: scale(1.5);
+      }
     }
   }
 
