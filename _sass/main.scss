@@ -173,19 +173,19 @@ body {
     }
 
     &:nth-of-type(1) {
-      background-color: lighten($primary, 20%);
+      background-color: lighten($primary, 12%);
     }
 
     &:nth-of-type(2) {
-      background-color: lighten($primary, 15%);
+      background-color: lighten($primary, 9%);
     }
 
     &:nth-of-type(3) {
-      background-color: lighten($primary, 10%);
+      background-color: lighten($primary, 6%);
     }
 
     &:nth-of-type(4) {
-      background-color: lighten($primary, 5%);
+      background-color: lighten($primary, 3%);
     }
 
     &:nth-of-type(5) {
@@ -193,7 +193,7 @@ body {
     }
 
     &:nth-of-type(6) {
-      background-color: darken($primary, 5%);
+      background-color: darken($primary, 3%);
     }
 
     &.padding {
@@ -251,9 +251,22 @@ body {
   .feature-card-set {
     margin: 30px 100px;
 
+    &:nth-of-type(even) {
+      .feature-image {
+        margin-left: 0;
+        margin-right: 100px;
+        order: 2;
+      }
+
+      .feature-text {
+        margin-left: 100px;
+        margin-right: 0;
+        order: 1;
+      }
+    }
+
     .card {
       border: none;
-      border-radius: 0;
     }
 
     .feature-image {
@@ -262,29 +275,16 @@ body {
       @include transitions;
 
       &:hover {
-        transform: scale(1.05, 1.05);
+        transform: scale(1.1, 1.1);
       }
     }
 
     .feature-text {
-      background-color: $light-blue;
       margin-right: 100px;
       padding: 20px;
 
       .card-text {
         margin-bottom: 2em;
-      }
-    }
-
-    &:nth-of-type(even) {
-      .feature-image {
-        margin-left: 0;
-        margin-right: 100px;
-      }
-
-      .feature-text {
-        margin-left: 100px;
-        margin-right: 0;
       }
     }
   }
@@ -296,6 +296,13 @@ footer {
   background-color: $darkest-gray;
   color: $white;
 
+  ul {
+    list-style: none;
+    padding-left: 0;
+    position: relative;
+    left: -10px;
+  }
+
   .branding {
     flex: 0 0 50%;
 
@@ -304,8 +311,7 @@ footer {
     }
 
     ul.social {
-      list-style: none;
-      padding-left: 0;
+      left: 0;
 
       li {
         display: inline;
@@ -336,6 +342,8 @@ footer {
     ul {
       padding-left: 0;
       list-style: none;
+      position: relative;
+      left: -15px;
 
       a {
         color: $mid-gray;
@@ -362,11 +370,6 @@ footer {
 
   .join-community {
     flex: 0 0 100%;
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
 
     @media (min-width: map-get($grid-breakpoints, 'lg')) {
       flex: 0 0 40%;
