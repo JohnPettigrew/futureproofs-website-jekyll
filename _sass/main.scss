@@ -8,24 +8,9 @@
 
 body {
   * {
+    padding: 0;
+    margin: 0;
     z-index: 1;
-  }
-
-  #background {
-    background: $white url("/images/hero-background-light.jpg") no-repeat 50% 0px;
-    background-size: auto 100%;
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-  }
-
-  @media (min-width: map-get($grid-breakpoints, 'xl')) {
-    #background {
-      background-size: 100% auto;
-    }
   }
 
   .clear-navbar {
@@ -39,6 +24,34 @@ body {
   .wrapper {
     max-width: 1200px;
     margin: 0 auto 0 auto;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2rem;
+  }
+
+  h3 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    font-weight: 700;
   }
 
   a.button-bottom {
@@ -101,7 +114,7 @@ body {
       .dropdown-menu {
         border: 1px solid $mid-gray;
         border-radius: 0;
-        margin-top: 16px;
+        margin-top: 15px;
         background-color: transparent;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
         @include transitions;
@@ -133,11 +146,21 @@ body {
   height: calc(100vh - 140px);
   min-height: 240px;
 
-  h1 {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 30px;
-    font-weight: 700;
+  #background {
+    background: $white url("/images/hero-background-light.jpg") no-repeat 50% 0px;
+    background-size: auto 100%;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  @media (min-width: map-get($grid-breakpoints, 'xl')) {
+    #background {
+      background-size: 100% auto;
+    }
   }
 
   p {
@@ -231,17 +254,6 @@ body {
 }
 
 .features {
-  h2 {
-    text-align: center;
-    margin-top: 50px;
-  }
-
-  h3 {
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 25px;
-  }
-
   .summary {
     width: 800px;
     margin: 10px auto;
@@ -262,6 +274,11 @@ body {
         margin-left: 100px;
         margin-right: 0;
         order: 1;
+        text-align: right;
+
+        h4 {
+          text-align: right;
+        }
       }
     }
 
@@ -286,8 +303,16 @@ body {
       .card-text {
         margin-bottom: 2em;
       }
+
+      .button-bottom {
+        margin-bottom: 0;
+      }
     }
   }
+}
+
+.testimonials {
+  background-color: $mid-gray;
 }
 
 footer {
@@ -343,7 +368,7 @@ footer {
       padding-left: 0;
       list-style: none;
       position: relative;
-      left: -15px;
+      left: -5px;
 
       a {
         color: $mid-gray;
@@ -357,14 +382,6 @@ footer {
 
     @media (min-width: map-get($grid-breakpoints, 'lg')) {
       flex: 0 0 25%;
-
-      h4 {
-        text-align: right;
-      }
-
-      ul {
-        float: right;
-      }
     }
   }
 
