@@ -3,7 +3,8 @@
 <script src="/js/bootstrap.min.js"></script>
 <script>
   function checkScroll() {
-    var startY = $('.navbar-outer').height(); //The point where the navbar changes in px
+    // var startY = $('.navbar-outer').height(); //The point where the navbar changes in px
+    var startY = 20;
 
     if ($(window).scrollTop() > startY) {
       $('.navbar-outer').addClass("scrolled");

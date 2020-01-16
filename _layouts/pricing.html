@@ -5,18 +5,41 @@
   <body>
     {% include _navbar.html %}
 
-    <section class="wrapper content pricing clear-navbar d-flex">
-      <article class="card" style="width:25%;">
-        <div class="card-header">Entry</div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">200 pages</li>
-          <li class="list-group-item">Unlimited users</li>
-          <li class="list-group-item">Unlimited bandwidth</li>
-          <li class="list-group-item">1 hour of training</li>
-          <li class="list-group-item">Live support for all users</li>
-          <li class="list-group-item">Pay by credit card or direct debit</li>
-        </ul>
-      </article>
+    <section class="wrapper content pricing clear-navbar d-flex justify-content-between">
+      <table class="table table-hover card mt-4 mb-4 col-3 pl-0 pr-0" style="width:25%;">
+        <tr class="table-dark text-dark col-12">
+          <th class="col-9">Recruit</th>
+          <th class="col-3"></th>
+        </tr>
+        <tr>
+          <td>Dashboards</td>
+          <td class="text-danger">&#10007;</td>
+        </tr>
+        <tr>
+          <td>Language analysis</td>
+          <td class="text-danger">&#10007;</td>
+        </tr>
+        <tr>
+          <td>Reports</td>
+          <td class="text-success">&#10003;</td>
+        </tr>
+        <tr>
+          <td>Unlimited users</td>
+          <td class="text-success">&#10003;</td>
+        </tr>
+        <tr>
+          <td>Unlimited data</td>
+          <td class="text-success">&#10003;</td>
+        </tr>
+        <tr class="table-dark text-dark font-weight-bold">
+          <td class="border-top-0">Setup fee</td>
+          <td class="border-top-0">£99</td>
+        </tr>
+        <tr class="table-dark text-dark font-weight-bold">
+          <td class="border-top-0">Monthly cost</td>
+          <td class="border-top-0">Free</td>
+        </tr>
+      </table>
     </section>
 
     {% include _footer.html %}

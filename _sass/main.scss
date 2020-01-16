@@ -376,6 +376,33 @@ body {
 
 }
 
+.pricing {
+  table {
+    tbody {
+      width: 100%;
+
+      th, td {
+        &:first-of-type {
+          padding-left: 40px;
+        }
+
+        &:last-of-type {
+          padding-right: 40px;
+          text-align: right;
+        }
+
+        img {
+          display: block;
+          width: 140px;
+          height: 32px;
+          position: relative;
+          left: -7px;
+        }
+      }
+    }
+  }
+}
+
 footer {
   padding-top: 50px;
   padding-bottom: 50px;
