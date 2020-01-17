@@ -85,6 +85,14 @@ body {
   p, li {
     padding: 0 0 10px 0;
   }
+
+  .card-deck {
+    margin-bottom: 2rem;
+
+    h3 {
+      margin: 0;
+    }
+  }
 }
 
 .navbar-outer {
@@ -271,7 +279,7 @@ body {
     }
 
     p {
-      margin-bottom: 3em;
+      margin-bottom: 3rem;
     }
 
     a {
@@ -283,7 +291,11 @@ body {
   }
 }
 
-.features {
+.index-features {
+  h2, h3, h4, strong {
+    color: $primary;
+  }
+
   .summary {
     width: 900px;
     margin: 10px auto;
@@ -439,6 +451,14 @@ body {
         }
       }
     }
+  }
+}
+
+.features {
+  h1 {
+    padding: 30px;
+    background-image: linear-gradient(to right, $primary, darken($primary, 10%));
+    color: $white;
   }
 }
 
