@@ -78,6 +78,8 @@ body {
     position: relative;
     top: -1px;
     filter: invert(100%);
+    margin-left: -5px;
+    margin-right: 5px;
   }
 
   p, li {
@@ -501,11 +503,6 @@ footer {
 
       a {
         color: $mid-gray;
-      }
-
-      img.arrow {
-        margin-left: -5px;
-        margin-right: 5px;
       }
     }
 
