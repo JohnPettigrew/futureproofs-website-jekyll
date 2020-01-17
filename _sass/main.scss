@@ -93,10 +93,20 @@ body {
   z-index: 50;
   border-bottom: 1px solid $mid-gray;
   @include transitions;
+  @media (max-width: map-get($grid-breakpoints, 'md')) {
+    border-bottom: none;
+  }
 
   &.scrolled {
     background-color: $white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-expand-md {
+    @media (max-width: map-get($grid-breakpoints, 'md')) {
+      background-color: $white;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    }
   }
 
   .navbar {
@@ -197,7 +207,12 @@ body {
     text-align: center;
     color: white;
     padding: 10px 20px 20px 20px;
-    flex: 0 0 50%;
+    flex: 0 0 100%;
+    overflow: hidden;
+
+    @media (min-width: map-get($grid-breakpoints, 'md')) {
+      flex: 0 0 50%;
+    }
 
     @media (min-width: map-get($grid-breakpoints, 'lg')) {
       flex: 0 0 25%;
@@ -271,10 +286,18 @@ body {
     width: 900px;
     margin: 10px auto;
     text-align: center;
+
+    @media (max-width: map-get($grid-breakpoints, 'md')) {
+      width: 90%;
+    }
   }
 
   .feature-card-set {
     margin: 30px 100px;
+
+    @media (max-width: map-get($grid-breakpoints, 'md')) {
+      margin: 30px 0;
+    }
 
     &:nth-of-type(even) {
       .feature-image {
@@ -293,7 +316,7 @@ body {
 
         .button-bottom {
           right: auto;
-          left: 0;
+          left: 20px;
         }
       }
     }
@@ -305,6 +328,10 @@ body {
     .feature-image {
       z-index: 0;
       @include transitions;
+
+      @media (max-width: map-get($grid-breakpoints, 'md')) {
+        display: none;
+      }
 
       &:hover {
         transform: scale(1.05);
@@ -340,6 +367,10 @@ body {
   background: $mid-gray url("/images/testimonials-background.jpg") no-repeat;
   background-size: cover;
 
+  @media (max-width: map-get($grid-breakpoints, 'lg')) {
+    overflow: scroll;
+  }
+
   .content {
     color: $white;
     text-align: center;
@@ -366,6 +397,12 @@ body {
         border-radius: 40px;
         width: 80px;
         height: 80px;
+      }
+
+      @media (max-width: map-get($grid-breakpoints, 'lg')) {
+        div {
+          margin-bottom: 30px;
+        }
       }
     }
 
@@ -451,6 +488,10 @@ footer {
 
   .information {
     flex: 0 0 50%;
+
+    @media (max-width: map-get($grid-breakpoints, 'md')) {
+      flex: 0 0 80%;
+    }
 
     ul {
       padding-left: 0;
