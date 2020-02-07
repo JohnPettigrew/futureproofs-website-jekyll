@@ -301,7 +301,7 @@ body {
     margin: 10px auto;
     text-align: center;
 
-    @media (max-width: map-get($grid-breakpoints, 'md')) {
+    @media (max-width: 900px) {
       width: 90%;
     }
   }
@@ -311,6 +311,11 @@ body {
 
     @media (max-width: map-get($grid-breakpoints, 'md')) {
       margin: 30px 0;
+      text-align: center;
+
+      h4 {
+        text-align: center;
+      }
     }
 
     &:nth-of-type(even) {
@@ -414,8 +419,16 @@ body {
       }
 
       @media (max-width: map-get($grid-breakpoints, 'lg')) {
+        p {
+          min-height: 0;
+        }
+
         div {
           margin-bottom: 30px;
+        }
+
+        &.row {
+          margin: 0;
         }
       }
     }
@@ -460,6 +473,14 @@ body {
     background-image: linear-gradient(to right, $primary, darken($primary, 10%));
     color: $white;
   }
+}
+
+.single-column-content {
+  h3 {
+    font-size: 1.2rem;
+  }
+
+
 }
 
 footer {
