@@ -72,14 +72,21 @@ body {
     padding-left: 1.2rem;
   }
 
-  img.arrow {
-    width: 30px;
-    height: 30px;
-    position: relative;
-    top: -1px;
-    filter: invert(100%);
-    margin-left: -5px;
-    margin-right: 5px;
+  img {
+    &.arrow {
+      width: 30px;
+      height: 30px;
+      position: relative;
+      top: -1px;
+      filter: invert(100%);
+      margin-left: -5px;
+      margin-right: 5px;
+    }
+
+    &.icon-large {
+      width: 120px;
+      height: 120px;
+    }
   }
 
   p, li {
@@ -880,7 +887,17 @@ body {
     font-size: 1.2rem;
   }
 
+  ul {
+    margin-left: 40px;
 
+    li {
+      padding: 0;
+
+      &:last-of-type {
+        padding-bottom: 10px;
+      }
+    }
+  }
 }
 
 footer {
