@@ -1,0 +1,47 @@
+---
+layout: default
+title: Contact us
+---
+
+<section class="wrapper content index-features single-column-content">
+  <h1 class="pt-5">Contact us</h1>
+
+  <div class="row justify-content-center">
+    <article class="col-12 col-md-4 text-center">
+      <img src="/images/envelope.svg" class="icon-large" />
+      <h2 class="mt-0 mb-2">Email</h2>
+      <p><a href="mailto:info@wearefutureproofs.com" class="text-dark">info@wearefutureproofs.com</a></p>
+    </article>
+    <article class="col-12 col-md-4 text-center">
+      <img src="/images/geo.svg" class="icon-large" />
+      <h2 class="mt-0 mb-2">Address</h2>
+      <p><a href="https://w3w.co/grants.coins.purple" class="text-dark">ideaSpace,<br />
+          3 Charles Babbage Road,<br />
+          Cambridge,<br />
+          CB3 0GT, UK</a></p>
+    </article>
+  </div>
+
+  <div class="row justify-content-center">
+    <article class="col-10 col-md-6 mt-5">
+      <p class="text-center"><img src="/images/chat.svg" class="icon-large" /></p>
+      <h2 class="mt-0 mb-2">Contact form</h2>
+      <form action="https://formspree.io/info@wearefutureproofs.com" method="POST" class="">
+        <input type="hidden" name="_next" value="//www.wearefutureproofs.com/contact-success.html" />
+        <input type="hidden" name="_subject" value="New query from marketing site" />
+        <input type="text" name="_gotcha" class="d-none" />
+        <label for="firstname" class="form-label">First name*</label>
+        <input id="firstname" type="text" name="firstname" data-constraints="@Required" class="form-control bg-white">
+        <label for="lastname" class="form-label">Last name*</label>
+        <input id="lastname" type="text" name="lastname" data-constraints="@Required" class="form-control bg-white">
+        <label for="phone" class="form-label">Phone (optional)</label>
+        <input id="phone" type="text" name="phone" class="form-control bg-white">
+        <label for="email" class="form-label">E-mail*</label>
+        <input id="email" type="text" name="email" data-constraints="@Required @Email" class="form-control bg-white">
+        <label for="message" class="form-label">Message*</label>
+        <textarea id="message" name="message" data-constraints="@Required" class="form-control bg-white"></textarea>
+        <input type="submit" value="Send message" class="btn btn-primary mt-4 mb-4">
+      </form>
+    </article>
+  </div>
+</section>

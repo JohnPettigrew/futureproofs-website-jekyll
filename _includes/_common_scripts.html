@@ -1,0 +1,23 @@
+<script src="/js/jquery.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script>
+  function checkScroll() {
+    // var startY = $('.navbar-outer').height(); //The point where the navbar changes in px
+    var startY = 20;
+
+    if ($(window).scrollTop() > startY) {
+      $('.navbar-outer').addClass("scrolled");
+      $('.dropdown-menu').addClass("scrolled");
+    } else {
+      $('.navbar-outer').removeClass("scrolled");
+      $('.dropdown-menu').removeClass("scrolled");
+    }
+  }
+
+  if ($('.navbar-outer').length > 0) {
+    $(window).on("scroll load resize", function() {
+      checkScroll();
+    });
+  }
+</script>
