@@ -906,85 +906,95 @@ footer {
   background-color: $darkest-gray;
   color: $white;
 
-  ul {
-    list-style: none;
-    padding-left: 0;
-    position: relative;
-    left: -10px;
-  }
+  .main-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-  .branding {
-    flex: 0 0 50%;
-
-    @media (min-width: map-get($grid-breakpoints, 'lg')) {
-      flex: 0 0 25%;
+    ul {
+      list-style: none;
+      padding-left: 0;
+      position: relative;
+      left: -10px;
     }
 
-    ul.social {
-      left: 0;
+    .branding {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 0 0 280px;
 
-      li {
-        display: inline;
-        margin: 10px;
+      ul.social {
+        left: 0;
 
-        a.btn-round {
-          border-radius: 20px;
-          padding: 10px;
-          width: 42px;
-          height: 42px;
+        li {
+          display: inline;
+          margin: 10px;
 
-          img {
-            position: relative;
-            top: -3px;
-            left: 0;
-            width: 20px;
-            height: 20px;
-            filter: invert(100%);
+          a.btn-round {
+            border-radius: 20px;
+            padding: 10px;
+            width: 42px;
+            height: 42px;
+
+            img {
+              position: relative;
+              top: -3px;
+              left: 0;
+              width: 20px;
+              height: 20px;
+              filter: invert(100%);
+            }
           }
         }
       }
     }
-  }
 
-  .information {
-    flex: 0 0 50%;
+    .information {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex: 0 0 50%;
 
-    @media (max-width: map-get($grid-breakpoints, 'md')) {
-      flex: 0 0 80%;
-    }
+      h4 {
+        margin: 0 2rem 0 0;
+      }
 
-    ul {
-      padding-left: 0;
-      list-style: none;
-      position: relative;
-      left: -5px;
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 0;
+        list-style: none;
+        position: relative;
+        left: -5px;
 
-      a {
-        color: $mid-gray;
+        li {
+          padding: 0;
+        }
+
+        a {
+          color: $mid-gray;
+        }
+      }
+
+      @media (max-width: map-get($grid-breakpoints, 'lg')) {
+        flex-direction: column;
+
+        h4 {
+          margin-bottom: 20px;
+        }
       }
     }
 
-    @media (min-width: map-get($grid-breakpoints, 'lg')) {
-      flex: 0 0 25%;
-    }
-  }
+    @media (max-width: map-get($grid-breakpoints, 'sm')) {
+      flex-direction: column;
 
-  .join-community {
-    flex: 0 0 100%;
-
-    @media (min-width: map-get($grid-breakpoints, 'lg')) {
-      flex: 0 0 40%;
-    }
-
-    input.btn {
-      border-radius: 0 0.2rem 0.2rem 0;
-    }
-
-    input[type='checkbox'] {
-      @include transitions;
-
-      &:hover {
-        transform: scale(1.5);
+      .information {
+        align-items: center;
       }
     }
   }
