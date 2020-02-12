@@ -857,26 +857,35 @@ body {
         margin-bottom: 0;
       }
 
+      &#video-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 0;
+
+        #video {
+          bottom: auto;
+          position: inherit;
+          transform: none;
+          margin-top: 15px;
+        }
+      }
+
       strong {
         color: $white;
       }
 
-      a.btn {
-        position: absolute;
-        bottom: 20px;
-        display: inline-block;
-        transform: translate(-50%,0);
+      a {
+        &.btn {
+          position: absolute;
+          bottom: 20px;
+          display: inline-block;
+          transform: translate(-50%,0);
 
-        &:hover {
-          transform: translate(-50%,0) scale(1.1);
+          &:hover {
+            transform: translate(-50%,0) scale(1.1);
+          }
         }
-      }
-    }
-
-    a {
-      &#video {
-        float: none;
-        margin-top: 15px;
       }
     }
   }
