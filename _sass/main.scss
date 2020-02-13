@@ -193,7 +193,7 @@ body {
   min-height: 240px;
 
   #background {
-    background: $white url("/images/hero-background-light.jpg") no-repeat 50% 0px;
+    background: $white url("images/hero-background-light.jpg") no-repeat 50% 0px;
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -423,7 +423,7 @@ body {
 .testimonials {
   height: 450px;
   width: 100%;
-  background: $mid-gray url("/images/testimonials-background.jpg") no-repeat;
+  background: $mid-gray url("images/testimonials-background.jpg") no-repeat;
   background-size: cover;
 
   @media (max-width: map-get($grid-breakpoints, 'lg')) {
