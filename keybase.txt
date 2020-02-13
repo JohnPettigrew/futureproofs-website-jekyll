@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/john_pettigrew
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.wearefutureproofs.com
+  * I am john_pettigrew (https://keybase.io/john_pettigrew) on keybase.
+  * I have a public key ASBKZiKszxlnruYLeZOk-oIC6iJHulRj5pvDeMDc0AR9YQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01204a6622accf1967aee60b7993a4fa8202ea2247ba5463e69bc378c0dcd0047d610a",
+      "host": "keybase.io",
+      "kid": "01204a6622accf1967aee60b7993a4fa8202ea2247ba5463e69bc378c0dcd0047d610a",
+      "uid": "c82e1a5f06ce7e2b969fe3026b997319",
+      "username": "john_pettigrew"
+    },
+    "merkle_root": {
+      "ctime": 1508421890,
+      "hash": "38257b474c39d91b5edacc9332db607b0756ff7ff54cf6a5480443db4f2af85508df188147f7e54e1a1f19a44fce1c94e1085696eb2469cf307cb6a0c1d80d9d",
+      "hash_meta": "43f454ee4aeb05ebefb21ec63be85cf24ac8352cd28dd13d0ab3837b32dd1a42",
+      "seqno": 1602798
+    },
+    "service": {
+      "hostname": "www.wearefutureproofs.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.33"
+  },
+  "ctime": 1508421909,
+  "expire_in": 504576000,
+  "prev": "87f026a64ae83091c5d4194a214d2da09aace1ac6526c719a244680324f3ff6e",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgSmYirM8ZZ67mC3mTpPqCAuoiR7pUY+abw3jA3NAEfWEKp3BheWxvYWTFA1d7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwNGE2NjIyYWNjZjE5NjdhZWU2MGI3OTkzYTRmYTgyMDJlYTIyNDdiYTU0NjNlNjliYzM3OGMwZGNkMDA0N2Q2MTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNGE2NjIyYWNjZjE5NjdhZWU2MGI3OTkzYTRmYTgyMDJlYTIyNDdiYTU0NjNlNjliYzM3OGMwZGNkMDA0N2Q2MTBhIiwidWlkIjoiYzgyZTFhNWYwNmNlN2UyYjk2OWZlMzAyNmI5OTczMTkiLCJ1c2VybmFtZSI6ImpvaG5fcGV0dGlncmV3In0sIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNTA4NDIxODkwLCJoYXNoIjoiMzgyNTdiNDc0YzM5ZDkxYjVlZGFjYzkzMzJkYjYwN2IwNzU2ZmY3ZmY1NGNmNmE1NDgwNDQzZGI0ZjJhZjg1NTA4ZGYxODgxNDdmN2U1NGUxYTFmMTlhNDRmY2UxYzk0ZTEwODU2OTZlYjI0NjljZjMwN2NiNmEwYzFkODBkOWQiLCJoYXNoX21ldGEiOiI0M2Y0NTRlZTRhZWIwNWViZWZiMjFlYzYzYmU4NWNmMjRhYzgzNTJjZDI4ZGQxM2QwYWIzODM3YjMyZGQxYTQyIiwic2Vxbm8iOjE2MDI3OTh9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoid3d3LndlYXJlZnV0dXJlcHJvb2ZzLmNvbSIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjMzIn0sImN0aW1lIjoxNTA4NDIxOTA5LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwicHJldiI6Ijg3ZjAyNmE2NGFlODMwOTFjNWQ0MTk0YTIxNGQyZGEwOWFhY2UxYWM2NTI2YzcxOWEyNDQ2ODAzMjRmM2ZmNmUiLCJzZXFubyI6OCwidGFnIjoic2lnbmF0dXJlIn2jc2lnxECYzcFXQLdByY76EjMzzsd8MPyf1mEFynwub7R2WSPdzz9aSfZ3/UDB6Zsn9v3r1vfXqbwe1IX7ru04/e0K25cGqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgCgmjhdEes2y/2Swng94PzUXN667VNXf0QDIPhDKX9T2jdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/john_pettigrew
+
+==================================================================
