@@ -408,7 +408,8 @@ body {
           text-align: center;
 
           .button-bottom {
-            left: 20px;
+            left: inherit;
+            right: 20px;
           }
         }
       }
