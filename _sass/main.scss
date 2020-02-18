@@ -136,9 +136,9 @@ body {
         width: 250px;
       }
 
-      @media (max-width: map-get($grid-breakpoints, 'sm')) {
-        width: 100%;
-        max-width: 100%;
+      @media (max-width: map-get($grid-breakpoints, 'md')) {
+        width: 50%;
+        max-width: 50%;
       }
     }
 
