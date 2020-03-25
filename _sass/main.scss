@@ -100,6 +100,67 @@ body {
       margin: 0;
     }
   }
+
+  .special-offer {
+    width: 80%;
+
+    blockquote {
+      background-color: $light-blue;
+      margin: 0 auto 50px auto;
+      padding: 30px 30px 1px 30px;
+      border-radius: 7px;
+
+      div {
+        margin-bottom: 16px;
+
+        &.signature {
+          font-weight: bold;
+          float: right;
+          text-align: right;
+        }
+
+        &.clear {
+          clear: both;
+        }
+      }
+
+      img {
+        float: right;
+      }
+    }
+
+    .btn-outline {
+      background: $white;
+      color: $primary;
+    }
+
+    .fine-print {
+      border: 1px solid $primary;
+      border-radius: 7px;
+      font-size: 80%;
+      padding: 30px 90px;
+      margin: 30px 0 60px 0;
+    }
+  }
+
+  .special-offer-button {
+    border: 2px dashed $secondary;
+    border-radius: 13px;
+    padding: 1rem;
+    width: 20rem;
+    height: 7.5rem;
+    margin: 30px auto;
+
+    p.text-center {
+      margin: 0;
+      font-size: 1.2rem;
+
+      a {
+        font-size: 1.2rem;
+        padding: 0.75rem 1.5rem;
+      }
+    }
+  }
 }
 
 .navbar-outer {
