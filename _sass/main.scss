@@ -389,7 +389,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    text-align: right;
+    text-align: left;
 
     &:nth-of-type(even) {
       .feature-image {
@@ -401,7 +401,6 @@ body {
       .feature-text {
         margin-right: 0;
         order: 1;
-        text-align: left;
 
         .button-bottom {
           right: auto;
