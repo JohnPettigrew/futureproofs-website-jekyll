@@ -57,6 +57,12 @@ body {
     font-size: 1.2rem;
   }
 
+  h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: $primary;
+  }
+
   .btn {
     @include transitions;
 
@@ -511,8 +517,6 @@ body {
     .quotes {
       h5 {
         font-size: 1.2rem;
-        font-weight: 700;
-        color: $primary;
         margin: 10px 0;
       }
 
@@ -975,6 +979,14 @@ body {
       &:last-of-type {
         padding-bottom: 10px;
       }
+    }
+  }
+
+  &.single-column-content-narrow {
+    width: 60%;
+
+    @media (max-width: map-get($grid-breakpoints, 'lg')) {
+      width: 90%;
     }
   }
 }
