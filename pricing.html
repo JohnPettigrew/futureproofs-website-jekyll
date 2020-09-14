@@ -5,12 +5,17 @@ title: Pricing
 
 <section class="wrapper content index-features single-column-content">
   <h1 class="pt-5">Simple pricing that scales with you</h1>
-  <h3 class="col-12 col-md-9 col-lg-6 m-auto">Choose a monthly or annual subscription, with prices based on your publishing volume.</h3>
+  <h3 class="col-12 col-md-9 col-lg-6 m-auto">Choose your monthly or annual subscription based on your publishing volume.</h3>
 
-  <h2>Choose your plan</h2>
-
-  <div class="col-12 col-md-6 col-lg-4 m-auto pricing-toggles">
-    <p class="text-center">Customise our Pro plan to suit the volume of content you publish. All plans get the same great features and support; only your volume differs.</p>
+  <div class="col-12 col-md-6 ml-auto mr-auto mt-5">
+    <p class="text-center">All plans give you all of our great features and support, but vary in how much content you can work on each month.</p>
+    <p class="text-center pb-0">
+      <strong>Intro</strong> lets you test the waters.<br />
+      <strong>Pro</strong> gives more pages and training.<br />
+      <strong>Enterprise</strong> is for when you need custom features and support.
+    </p>
+  </div>
+  <div class="col-12 col-md-6 ml-auto mr-auto mt-5 pricing-toggles">
     <form class="model-switch">
       <span class="toggle-left">Pay monthly</span>
       <label class="switch">
@@ -20,6 +25,7 @@ title: Pricing
       <span class="toggle-right">Pay annually</span>
     </form>
     <form class="volume-slider">
+      <label class="volume-label mb-2">How much do you publish each month?</label>
       <input id="priceVolume" type="range" name="pages-per-month" min="500" max="3000" value="500" step="500" class="volume">
       <label class="volume-label"><span id="priceOutput">500</span> pages</label>
     </form>
