@@ -18,5 +18,3 @@ sass:
   load_paths:
     - _sass
     - node_modules/
-
-theme: jekyll-theme-minimal
