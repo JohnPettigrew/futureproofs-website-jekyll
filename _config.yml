@@ -11,8 +11,8 @@ github_username:  johnpettigrew
 
 # Build settings
 # theme: minima
-plugins:
-  - jekyll-feed
+# plugins:
+#   - jekyll-feed
 
 sass:
   load_paths:
