@@ -97,6 +97,11 @@ body {
 
   p, li {
     padding: 0 0 10px 0;
+
+    &.item-complete {
+      text-decoration: line-through;
+      color: $green;
+    }
   }
 
   .card-deck {
@@ -1022,6 +1027,19 @@ body {
 
     @media (max-width: map-get($grid-breakpoints, 'lg')) {
       width: 90%;
+    }
+  }
+}
+
+.ecologi-badge {
+  width: 200px;
+  margin: 10px auto 30px auto;
+
+  a {
+    display: inline-block;
+
+    img {
+      width: 200px;
     }
   }
 }

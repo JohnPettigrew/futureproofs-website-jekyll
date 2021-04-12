@@ -4,10 +4,10 @@ ruby "~>2.6"
 
 gem "jekyll", "~>4.1.1"
 
-group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.13"
-  # gem "jekyll-pages-directory"
-end
+# group :jekyll_plugins do
+#   gem "jekyll-feed", "~> 0.13"
+#   # gem "jekyll-pages-directory"
+# end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
