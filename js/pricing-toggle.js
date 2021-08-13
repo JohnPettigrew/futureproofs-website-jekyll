@@ -1,9 +1,9 @@
 // Define pricing
 
-const priceBaseMonthly = 365;
-const priceIncrementMonthly = 319;
-const priceBaseAnnual = 309;
-const priceIncrementAnnual = 269;
+const priceBaseMonthly = 395;
+const priceIncrementMonthly = 329;
+const priceBaseAnnual = 329;
+const priceIncrementAnnual = 279;
 let pricingMap = new Map();
 
 //Sets pricingMap to contain the monthly prices
