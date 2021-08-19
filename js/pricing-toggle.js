@@ -1,6 +1,6 @@
 // Define pricing
 
-const priceBaseMonthly = 395;
+const priceBaseMonthly = 379;
 const priceIncrementMonthly = 329;
 const priceBaseAnnual = 329;
 const priceIncrementAnnual = 279;
