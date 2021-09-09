@@ -469,18 +469,11 @@ p {
     background: $darkest-gray !important;
 }
 
-.defaultcolor {
+.secondarycolor {
     color: $secondary;
 }
-.bg-yellow {
+.bg-secondary {
     background: $secondary;
-}
-
-.bluecolor {
-    color: $primary !important;
-}
-.bg-blue {
-    background: $primary;
 }
 
 .container-padding {
@@ -988,7 +981,6 @@ ul.social-icons.white li a:focus {
     font-size: 15px;
     padding: .8rem 2.25rem;
     line-height: 1;
-    text-transform: capitalize;
     text-align: center;
     font-weight: 500;
     z-index: 1;
@@ -1415,7 +1407,6 @@ ul.links li a::before,
 .navbar-nav .nav-link {
     padding: 8px 0 !important;
     font-weight: 500;
-    text-transform: capitalize;
     font-size: 14px;
     color: $darkest-gray;
     position: relative;
@@ -1607,13 +1598,13 @@ a.dropdown-toggle::after {
     color: $secondary !important;
 }
 
-.bg-yellow .dropdown-menu .dropdown-item:hover,
+.bg-secondary .dropdown-menu .dropdown-item:hover,
 
-.bg-yellow .dropdown-menu.megamenu .dropdown-item:hover {
+.bg-secondary .dropdown-menu.megamenu .dropdown-item:hover {
     color: $primary !important;
 }
-.bg-yellow .navbar-nav .nav-link:hover,
-.bg-yellow .navbar-nav .nav-link.active{
+.bg-secondary .navbar-nav .nav-link:hover,
+.bg-secondary .navbar-nav .nav-link.active{
     color: $white !important;
 }
 
@@ -3550,7 +3541,6 @@ h4.darkcolor {
 .cbp-l-filters .cbp-filter-item span {
     color: $darkest-gray;
     font-size: 0.85rem;
-    text-transform: capitalize;
     position: relative;
     padding-bottom: 0;
 }
