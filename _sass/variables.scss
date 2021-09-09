@@ -10,7 +10,7 @@ $mid-gray: #8a8a8a;
 $dark-gray: #575757;
 $darkest-gray: #26313c;
 
-$mid-orange: #f8d385;
+$mid-orange: lighten($orange, 16%);
 $mid-dark-orange: lighten($orange, 8%);
 $light-orange: #fdf3e6;
 $mid-blue: lighten($blue, 25%);
