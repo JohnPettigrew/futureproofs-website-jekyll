@@ -1,7 +1,6 @@
 ---
 ---
 
-@import "variables";
 @import "vendor/bootstrap";
 @import "vendor/bundle.min";
 @import "vendor/cubeportfolio.min";
@@ -12,5 +11,6 @@
 @import "vendor/swiper.min";
 @import "vendor/tooltipster.min";
 @import "vendor/wow";
-@import "revolution/navigation";
+@import "vendor/revolution/navigation";
+@import "variables";
 @import "main-source";
