@@ -190,6 +190,12 @@ button {
   h2 {
     font-size: 1.5rem;
     padding-bottom: 1rem;
+
+    &.numbered-list {
+      display: list-item;
+      list-style: decimal;
+      margin-left: 25px;
+    }
   }
 
   h3 {
@@ -206,6 +212,16 @@ button {
   ul {
     list-style: disc;
     margin: 0 0 1rem 25px;
+  }
+
+  ol {
+    list-style: decimal;
+    margin: 0 0 1rem 25px;
+
+    ol {
+      list-style: lower-alpha;
+      margin-bottom: 0;
+    }
   }
 
   p {
