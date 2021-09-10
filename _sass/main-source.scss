@@ -2077,10 +2077,6 @@ a.dropdown-toggle::after {
     .process-wrapp li::before {
         width: 0 !important;
     }
-    .carousel-shop-detail .owl-nav button:focus {
-        background: $white;
-        color: $secondary;
-    }
     .coming-soon-heading {
         font-size: 70px;
     }
@@ -2416,7 +2412,7 @@ a.dropdown-toggle::after {
 }
 
 .testimonial-bg {
-    background: url(../images/rakib-images/testimonial-bg.jpg) no-repeat;
+    background: url(../images/backgrounds/testimonials-background.jpg) no-repeat;
 }
 
 .contact-banner::before,
@@ -3227,24 +3223,21 @@ iframe {
     background: $black;
 }
 
-
-/*----- Team ends -----*/
-
-
 /*----- Testimonial -----*/
+
+#testimonial-slider {
+  p {
+    color: $white;
+  }
+}
 
 .bg-testimonial,
 #testimonial-slider .owl-nav {
-    position: relative;
-}
-
-#testimonial-slider {
-    margin-top: -90px;
-    margin-bottom: -20px;
+  position: relative;
 }
 
 .bg-transparent {
-    background: transparent;
+  background: transparent;
 }
 
 .bg-testimonial::after {
@@ -3252,7 +3245,7 @@ iframe {
     left: 0;
     top: 0;
     position: absolute;
-    background: url(../images/rakib-images/testimonial-bg.jpg) no-repeat center center;
+    background: url(../images/backgrounds/testimonials-background.jpg) no-repeat center center;
     -webkit-background-size: cover;
     background-size: cover;
     z-index: -1;
@@ -3296,7 +3289,7 @@ iframe {
 
 #testimonial-slider .owl-nav {
     width: 300px;
-    display: inline-block;
+    display: block;
     height: 30px;
     -webkit-transform: translateY(-150%);
     -moz-transform: translateY(-150%);
