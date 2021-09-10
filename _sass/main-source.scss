@@ -108,11 +108,6 @@ ol, ul {
   margin: 0;
   padding: 0;
   list-style: none;
-
-  &.bullets {
-    list-style: disc;
-    margin: 0 0 25px 25px;
-  }
 }
 
 a,
@@ -171,14 +166,6 @@ h6 {
     font-size: 0.875rem;
 }
 
-p.title {
-    font-size: 1rem;
-}
-
-.italic {
-    font-style: italic;
-}
-
 button {
     line-height: 1;
 }
@@ -197,6 +184,32 @@ button {
 
 .bg-secondary {
   background-color: $secondary !important;
+}
+
+#single-column-page {
+  h2 {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+  }
+
+  ul {
+    list-style: disc;
+    margin: 0 0 1rem 25px;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: $primary;
+    text-decoration: underline;
+  }
 }
 
 .owl-carousel {
