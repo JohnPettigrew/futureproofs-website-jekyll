@@ -196,6 +196,21 @@ button {
     line-height: 1;
 }
 
+.text-primary {
+  color: $primary !important;
+}
+
+.text-secondary {
+  color: $secondary !important;
+}
+
+.bg-primary {
+  background-color: $primary !important;
+}
+
+.bg-secondary {
+  background-color: $secondary !important;
+}
 
 /* Helper Classes & Short-codes */
 
@@ -450,28 +465,23 @@ p {
 .bgdefault {
     background: $secondary
 }
-.bgprimary {
-    background: $primary;
-}
 
-.bgdark {
-    background: $darkest-gray;
+.bg-primary {
+    background: $primary;
 }
 
 .whitecolor {
     color: $white;
 }
 
-.darkcolor {
+.text-primary {
     color: $primary;
 }
+
 .bg-dark {
     background: $darkest-gray !important;
 }
 
-.secondarycolor {
-    color: $secondary;
-}
 .bg-secondary {
     background: $secondary;
 }
@@ -895,8 +905,8 @@ ul.no-border.social-icons li a,
 ul.no-border.social-icons-simple li a {
     border-color: transparent !important;
 }
-ul.darkcolor.social-icons li a,
-ul.darkcolor.social-icons-simple li a {
+ul.text-primary.social-icons li a,
+ul.text-primary.social-icons-simple li a {
     color: $darkest-gray;
     border-color: $darkest-gray;
 }
@@ -1436,14 +1446,14 @@ ul.links li a::before,
     color: $white;
 }
 
-.transparent-bg.darkcolor .navbar-nav .nav-link {
+.transparent-bg.text-primary .navbar-nav .nav-link {
     color: $darkest-gray;
 }
 .whitecolor .navbar-nav .nav-link {
     color: $white;
 }
 
-.transparent-bg.darkcolor .navbar-nav .nav-link.active {
+.transparent-bg.text-primary .navbar-nav .nav-link.active {
     color: $secondary;
 }
 
@@ -3425,7 +3435,7 @@ iframe {
     transform: scale(1.1) rotate(-10deg);
 }
 
-h4.darkcolor {
+h4.text-primary {
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
     -o-transition: 0.4s;
@@ -5226,7 +5236,7 @@ ul.count_down.white li p:nth-child(2) {
 }
 
 .pricing-item.active,
-.pricing-item.active .darkcolor{
+.pricing-item.active .text-primary{
     color: $white;
 }
 
@@ -5699,7 +5709,7 @@ ul.links li a:focus,
     .page-header .page-titles {
         transform: translateY(20px);
     }
-    #pagepiling .darkcolor {
+    #pagepiling .text-primary {
         color: $white;
     }
     .sidemenu_btn {
