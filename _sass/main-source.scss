@@ -2571,7 +2571,8 @@ iframe {
     font-weight: bold;
 }
 
-#key-messages-slider .message-box i {
+#key-messages-slider .message-box, .feature-item {
+  i {
     -webkit-transform: scale(0.85);
     -moz-transform: scale(0.85);
     -ms-transform: scale(0.85);
@@ -2580,14 +2581,15 @@ iframe {
     -webkit-transition: all .18s linear;
     -o-transition: all .18s linear;
     transition: all .18s linear;
-}
+  }
 
-#key-messages-slider .message-box:hover i {
+  &:hover i {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     -o-transform: scale(1);
     transform: scale(1);
+  }
 }
 
 #key-messages-slider .owl-item.center .message-box {
