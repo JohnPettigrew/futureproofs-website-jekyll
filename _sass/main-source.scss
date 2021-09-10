@@ -2367,6 +2367,10 @@ a.dropdown-toggle::after {
   &.privacy-header {
       background: url(../images/rakib-images/bg-blog-header.jpg) no-repeat;
   }
+
+  &.testimonial-bg {
+      background: url(../images/backgrounds/testimonials-background.jpg) no-repeat;
+  }
 }
 
 .contact-banner::before,
