@@ -2339,102 +2339,34 @@ a.dropdown-toggle::after {
     right: 0;
 }
 
-
-/*----- OWl / Revolution ends-----*/
-
-
 /*-----Page Headers----- */
 
 .page-header {
-    background-position: center center;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
-}
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
 
-.about-header {
-    background: url(../images/rakib-images/bg-about-header.jpg) no-repeat;
-}
+  &.about-header {
+      background: url(../images/rakib-images/bg-about-header.jpg) no-repeat;
+  }
 
-.blog-header {
-    background: url(../images/rakib-images/bg-blog-header.jpg) no-repeat;
-}
+  &.contact-header {
+      background: url(../images/rakib-images/bg-contact-header.jpg) no-repeat;
+  }
 
-.blog2-header {
-    background: url(../images/rakib-images/bg-blog2-header.jpg) no-repeat;
-}
+  &.ethics-header {
+      background: url(../images/rakib-images/bg-blog2-header.jpg) no-repeat;
+  }
 
-.blog-detail-header {
-    background: url(../images/rakib-images/bg-blog-detail-header.jpg) no-repeat;
-}
+  &.legal-header {
+      background: url(../images/rakib-images/bg-blog-detail-header.jpg) no-repeat;
+  }
 
-.service-header {
-    background: url(../images/rakib-images/bg-service-header.jpg) no-repeat;
-}
-
-.contact-header {
-    background: url(../images/rakib-images/bg-contact-header.jpg) no-repeat;
-}
-
-.gallery-header {
-    background: url(../images/rakib-images/bg-gallery-header.jpg) no-repeat;
-}
-
-.gallery-detail-header {
-    background: url(../images/rakib-images/bg-gallery-detail-header.jpg) no-repeat;
-}
-
-.shop-detail-header {
-    background: url(../images/rakib-images/bg-shop-detail-header.jpg) no-repeat;
-}
-
-.shop-header {
-    background: url(../images/rakib-images/bg-shop-header.jpg) no-repeat;
-}
-
-.cart-header {
-    background: url(../images/rakib-images/bg-cart-header.jpg) no-repeat;
-}
-
-.team-header {
-    background: url(../images/rakib-images/bg-team-header.jpg) no-repeat;
-}
-
-.pricing-header {
-    background: url(../images/rakib-images/bg-pricing-header.jpg) no-repeat;
-}
-
-.testimonial-header {
-    background: url(../images/rakib-images/bg-testimonial-header.jpg) no-repeat;
-}
-
-.faq-header {
-    background: url(../images/rakib-images/bg-faq-header.jpg) no-repeat;
-}
-
-.error404-header {
-    background: url(../images/rakib-images/bg-404-header.jpg) no-repeat;
-}
-
-.coming-soon-header {
-    background: url(../images/rakib-images/bg-coming-soon-header.jpg) no-repeat;
-}
-
-.sign-in-header {
-    background: url(../images/rakib-images/bg-sign-in-header.jpg) no-repeat;
-}
-
-.sign-up-header {
-    background: url(../images/rakib-images/bg-sign-up-header.jpg) no-repeat;
-}
-
-.reset-header {
-    background: url(../images/rakib-images/bg-reset-header.jpg) no-repeat;
-}
-
-.testimonial-bg {
-    background: url(../images/backgrounds/testimonials-background.jpg) no-repeat;
+  &.privacy-header {
+      background: url(../images/rakib-images/bg-blog-header.jpg) no-repeat;
+  }
 }
 
 .contact-banner::before,

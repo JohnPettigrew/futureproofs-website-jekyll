@@ -5,7 +5,7 @@
   <body>
     {% include _navbar.html %}
 
-    <section id="main-banner-page" class="position-relative page-header contact-header section-nav-smooth parallax">
+    <section id="main-banner-page" class="position-relative page-header {{ page.banner-type }}-header section-nav-smooth parallax">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 offset-lg-3">
@@ -29,11 +29,7 @@
       </div>
     </section>
 
-    <section id="single-column-page" class="bglight padding_top padding_bottom_half">
-      <div class="container whitebox">
-        {{ content}}
-      </div>
-    </section>
+    {{ content}}
 
     {% include _footer.html %}
     {% include _common_scripts.html %}
