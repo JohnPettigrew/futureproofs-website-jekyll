@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+  <html lang="{{ site.lang | default: "en-GB" }}">
+  {% include _head.html %}
+
+  <body>
+    {% include _navbar.html %}
+
+    <section id="main-banner-page" class="position-relative page-header contact-header section-nav-smooth parallax">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 offset-lg-3">
+            <div class="page-titles text-white text-center padding">
+              <h1 class="py-2">{{ page.title }}</h1>
+              <h3 class="font-light pb-4 pt-1">{{ page.subtitle }}</h3>
+            </div>
+          </div>
+        </div>
+        <div class="gradient-bg title-wrap mt-n5">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 text-white">
+              <h3 class="float-left">{{ page.title }}</h3>
+              <ul class="breadcrumb top10 bottom10 float-right">
+                <li class="breadcrumb-item hover-light"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item hover-light">{{ page.title }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="single-column-page" class="bglight padding_top padding_bottom_half">
+      <div class="container whitebox">
+        {{ content}}
+      </div>
+    </section>
+
+    {% include _footer.html %}
+    {% include _common_scripts.html %}
+  </body>
+</html>
