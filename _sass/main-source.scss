@@ -25,7 +25,7 @@
 04 owl & revolution
 05 Page header
 06 about_us
-   - services-slider
+   - key-messages-slider
    - services-main
    - Work Process
    - App Features
@@ -72,10 +72,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800|Lato:300,400,700');
 
 body {
-    font-size: 15px;
+    font-size: $font-size-base;
     color: #808080;
     font-weight: normal;
-    font-family: 'Lato', sans-serif;
+    font-family: $font-family-body;
     overflow-x: hidden;
     direction: ltr;
     line-height: 1.5;
@@ -104,7 +104,7 @@ blockquote {
 }
 
 html {
-    font-size: 16px;
+    font-size: $font-size-base;
 }
 
 ol,
@@ -150,7 +150,7 @@ h4,
 h5,
 .button,
 .numbered .tp-bullet .tp-count {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $font-family-heading;
 }
 
 h1 {
@@ -210,6 +210,18 @@ button {
 
 .bg-secondary {
   background-color: $secondary !important;
+}
+
+.owl-carousel {
+  margin-top: 30px;
+
+  .owl-item {
+    img {
+      width: inherit;
+      height: inherit;
+      margin: auto;
+    }
+  }
 }
 
 /* Helper Classes & Short-codes */
@@ -458,20 +470,12 @@ p {
     font-size: 19px;
 }
 
-.bglight {
+.bg-light {
     background: $light-gray;
-}
-
-.bgdefault {
-    background: $secondary
 }
 
 .bg-primary {
     background: $primary;
-}
-
-.whitecolor {
-    color: $white;
 }
 
 .text-primary {
@@ -479,7 +483,7 @@ p {
 }
 
 .bg-dark {
-    background: $darkest-gray !important;
+    background: $darkest-gray;
 }
 
 .bg-secondary {
@@ -1172,7 +1176,7 @@ button,
 .cbp-l-filters .cbp-filter-item span,
 .testi-box .testimonial-round>img,
 .feature-item .icon,
-services-slider .service-box>span {
+#key-messages-slider .message-box>span {
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -1214,7 +1218,7 @@ ul.hours_links li::before,
 blockquote.blockquote::before,
 ul.links li a::before,
 .form-check label::before {
-    font-family: "Font Awesome 5 Free", serif;
+    font-family: $font-family-fontawesome;
     font-weight: 900;
 }
 
@@ -1448,9 +1452,6 @@ ul.links li a::before,
 
 .transparent-bg.text-primary .navbar-nav .nav-link {
     color: $darkest-gray;
-}
-.whitecolor .navbar-nav .nav-link {
-    color: $white;
 }
 
 .transparent-bg.text-primary .navbar-nav .nav-link.active {
@@ -2354,10 +2355,6 @@ a.dropdown-toggle::after {
     background: url(../images/rakib-images/bg-service-header.jpg) no-repeat;
 }
 
-.service-detail-header {
-    background: url(../images/rakib-images/bg-service-detail-header.jpg) no-repeat;
-}
-
 .contact-header {
     background: url(../images/rakib-images/bg-contact-header.jpg) no-repeat;
 }
@@ -2493,8 +2490,8 @@ iframe {
     font-size: 2.25rem;
 }
 
-#services-slider,
-#services-slider .service-box,
+#key-messages-slider,
+#key-messages-slider .message-box,
 .services-main .services-content,
 .process-wrapp,
 .process-wrapp li,
@@ -2518,7 +2515,7 @@ iframe {
     position: absolute;
 }
 
-#services-slider .service-box>span,
+#key-messages-slider .message-box>span,
 .process-wrapp li>.pro-step,
 .progress-bars .progress p,
 .progress-bars .progress .progress-bar span::after {
@@ -2528,22 +2525,22 @@ iframe {
 
 /*Service Slider*/
 
-#services-slider {
+#key-messages-slider {
     margin: -140px 0 0;
     min-height: 345px;
     z-index: 21;
 }
 
-#services-slider.half-margin {
+#key-messages-slider.half-margin {
     margin: -110px 0 0;
 }
 
-#services-slider.owl-carousel .owl-stage-outer {
+#key-messages-slider.owl-carousel .owl-stage-outer {
     padding-top: 25px;
     padding-bottom: 25px;
 }
 
-#services-slider .service-box {
+#key-messages-slider .message-box {
     padding: 3rem 2rem;
     background: $primary;
     color: $white;
@@ -2554,7 +2551,7 @@ iframe {
     z-index: 2;
 }
 
-#services-slider.services-slider-light .service-box {
+#key-messages-slider.key-messages-slider-light .message-box {
     background: $dark-gray;
 }
 
@@ -2562,23 +2559,23 @@ iframe {
     background: $dark-gray;
 }
 
-#services-slider .service-box,
-#services-slider .service-box>span {
+#key-messages-slider .message-box,
+#key-messages-slider .message-box>span {
     overflow: hidden;
 }
 
-#services-slider .service-box>span {
+#key-messages-slider .message-box>span {
     font-size: 40px;
     height: 50px;
     width: 50px;
     line-height: 50px;
 }
 
-#services-slider .service-box h4 {
+#key-messages-slider .message-box h4 {
     font-weight: bold;
 }
 
-#services-slider .service-box i {
+#key-messages-slider .message-box i {
     -webkit-transform: scale(0.85);
     -moz-transform: scale(0.85);
     -ms-transform: scale(0.85);
@@ -2589,7 +2586,7 @@ iframe {
     transition: all .18s linear;
 }
 
-#services-slider .service-box:hover i {
+#key-messages-slider .message-box:hover i {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
@@ -2597,7 +2594,7 @@ iframe {
     transform: scale(1);
 }
 
-#services-slider .owl-item.center .service-box {
+#key-messages-slider .owl-item.center .message-box {
     background-color: $secondary;
     padding: 4.5rem 2rem;
     margin-top: -25px;
@@ -2613,7 +2610,7 @@ iframe {
     background-image: linear-gradient(to right, $secondary 0%, $mid-orange 51%, $secondary 100%);
 }
 
-#services-slider .owl-item.center .service-box:hover {
+#key-messages-slider .owl-item.center .message-box:hover {
     background-position: right center;
 }
 
@@ -3081,10 +3078,10 @@ iframe {
 }
 
 @media screen and (max-width: 768px) {
-    #services-slider {
+    #key-messages-slider {
         margin: -70px 0 0;
     }
-    #services-slider.half-margin {
+    #key-messages-slider.half-margin {
         margin: -55px 0 0;
     }
     .counters .count_nums {
@@ -3563,10 +3560,6 @@ h4.text-primary {
     content: "/";
 }
 
-.cbp-l-filters.whitecolor .cbp-filter-item span {
-    color: $white;
-}
-
 .cbp-l-filters .cbp-filter-item-active {
     cursor: default;
 }
@@ -3574,8 +3567,8 @@ h4.text-primary {
 .cbp-l-filters .cbp-filter-item-active span,
 .cbp-l-filters .cbp-filter-item:hover span,
 .cbp-l-filters .cbp-filter-item:focus span,
-.cbp-l-filters.whitecolor .cbp-filter-item:focus span,
-.cbp-l-filters.whitecolor .cbp-filter-item-active span {
+.cbp-l-filters.text-white .cbp-filter-item:focus span,
+.cbp-l-filters.text-white .cbp-filter-item-active span {
     color: $secondary;
 }
 
@@ -4357,7 +4350,7 @@ ul.rounded li::before {
 
 .quote-wrapper h3::before {
     content: "\f10d";
-    font-family: "Font Awesome 5 Free", serif;
+    font-family: $font-family-fontawesome;
     font-weight: 900;
     font-size: 20px;
     position: absolute;
@@ -4368,7 +4361,7 @@ ul.rounded li::before {
 
 .quote-wrapper h3::after {
     content: "\f10e";
-    font-family: "Font Awesome 5 Free", serif;
+    font-family: $font-family-fontawesome;
     font-weight: 900;
     font-size: 20px;
     position: absolute;
@@ -4436,126 +4429,6 @@ ul.rounded li::before {
 .accordion-item {
     display: none !important;
 }
-
-
-/*shop carousel*/
-
-.carousel-shop-detail .owl-nav,
-#carousel-gallery-detail .owl-nav {
-    display: flex;
-    align-items: center;
-}
-
-.carousel-shop-detail,
-#carousel-gallery-detail {
-    overflow: hidden;
-}
-
-#syncCarousel .owl-nav button,
-#carousel-gallery-detail .owl-nav button {
-    background: $white !important;
-    opacity: 0.8;
-    color: $black;
-    border-radius: 3px;
-    padding: 20px 15px !important;
-    transition: all 0.3s ease-in;
-    display: flex;
-    justify-content: center;
-}
-
-.carousel-shop-detail .owl-nav button:hover,
-#carousel-gallery-detail .owl-nav button:hover {
-    background: $white;
-    color: $secondary !important;
-}
-
-.carousel-shop-detail .owl-nav button:before,
-#carousel-gallery-detail .owl-nav button:before {
-    transform: scale(0);
-    visibility: hidden;
-    opacity: 0;
-}
-
-.carousel-shop-detail:hover .owl-nav button,
-#carousel-gallery-detail:hover .owl-nav button {
-    transform: translateX(0);
-}
-
-.carousel-shop-detail .owl-nav .owl-prev {
-    margin: -50% 15px;
-    transform: translateX(-45px);
-}
-
-#carousel-gallery-detail .owl-nav .owl-prev {
-    margin: -30% 15px;
-    transform: translateX(-45px);
-}
-
-.carousel-shop-detail .owl-nav .owl-next {
-    margin: -50% 15px;
-    transform: translateX(45px);
-}
-
-#carousel-gallery-detail .owl-nav .owl-next {
-    margin: -30% 15px;
-    transform: translateX(45px);
-}
-
-.carousel-shop-detail .owl-nav button span,
-#carousel-gallery-detail .owl-nav button span {
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: -17px;
-}
-
-.carousel-shop-detail-inner .item {
-    margin-top: 2px;
-    opacity: 0.5;
-    border: 2px solid transparent;
-    transition: all 0.4s linear;
-}
-
-.carousel-shop-detail-inner .synced .item {
-    opacity: 1;
-    border: 2px solid $secondary;
-}
-
-.carousel-shop-detail .owl-stage-outer {
-    /*height: 350px;*/
-}
-
-#syncCarousel .owl-stage {
-    pointer-events: auto;
-}
-
-#syncCarousel .item img {
-    -webkit-transition: all .1s ease-out;
-    -moz-transition: all .1s ease-out;
-    -o-transition: all .1s ease-out;
-    transition: all .1s ease-out;
-    cursor: zoom-in;
-}
-
-#syncCarousel .item:hover img {
-    transform: scale(1.8);
-}
-
-#syncChild .owl-item:not(.synced) {
-    cursor: pointer;
-}
-
-#carousel-gallery-detail .item img {
-    -webkit-transition: all .1s ease-out;
-    -moz-transition: all .1s ease-out;
-    -o-transition: all .1s ease-out;
-    transition: all .1s ease-out;
-    cursor: zoom-in;
-}
-
-#carousel-gallery-detail .item:hover img {
-    transform: scale(1.5);
-}
-
 
 /*Comments & Date*/
 
@@ -4889,7 +4762,7 @@ form.findus select {
 
 form.findus .select:after {
     content: "\f107";
-    font-family: "Font Awesome 5 Free", serif;
+    font-family: $font-family-fontawesome;
     font-weight: 900;
     color: inherit;
     font-size: 16px;
@@ -5257,7 +5130,7 @@ ul.count_down.white li p:nth-child(2) {
 .pricing-item.sale::before,
 .shopping-box .sale::before {
     content: '\f02e';
-    font-family: "Font Awesome 5 Free", serif;
+    font-family: $font-family-fontawesome;
     font-weight: 900;
     position: absolute;
     top: -28px;
@@ -5304,7 +5177,7 @@ ul.count_down.white li p:nth-child(2) {
 .pricing-list li::before,
 .price-included::before {
     content: '\f00c';
-    font-family: "Font Awesome 5 Free", serif;
+    font-family: $font-family-fontawesome;
     font-weight: 900;
     position: absolute;
     top: 2px;
@@ -5317,7 +5190,7 @@ ul.count_down.white li p:nth-child(2) {
 
 .pricing-list li.price-not::before {
     content: '\f00d';
-    font-family: "Font Awesome 5 Free", serif;
+    font-family: $font-family-fontawesome;
     font-weight: 900;
     position: absolute;
     top: 2px;
@@ -5721,7 +5594,7 @@ ul.links li a:focus,
     .side-menu .btn-close {
         margin-right: 0.7rem;
     }
-    #services-slider .service-box>span {
+    #key-messages-slider .message-box>span {
         padding-top: 0.5rem;
     }
     .eny_profile .profile_text .readmorebtn {

@@ -626,22 +626,41 @@ jQuery(function ($) {
     });
 
 
-    /* ------ OWL Slider ------ */
-    /*Partners / LOgo*/
-    $("#partners-slider").owlCarousel({
-        items: 5,
-        autoplay: 1500,
-        smartSpeed: 1500,
+    /* ------ OWL Sliders ------ */
+    $("#key-messages-slider").owlCarousel({
+        autoplay: false,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        smartSpeed: 1200,
+        loop: true,
+        nav: true,
+        navText: false,
+        dots: false,
+        mouseDrag: true,
+        touchDrag: true,
+        center: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            640: {
+                items: 3
+            }
+        }
+    });
+
+    $("#customers-slider").owlCarousel({
+        items: 4,
+        autoplay: 2500,
+        smartSpeed: 2500,
         autoplayHoverPause: true,
         slideBy: 1,
         loop: true,
         margin: 30,
         dots: false,
         nav: false,
+        autoHeight: true,
         responsive: {
-            1200: {
-                items: 5,
-            },
             991: {
                 items: 4,
             },
@@ -657,7 +676,6 @@ jQuery(function ($) {
         }
     });
 
-    /*Testimonials*/
     $("#testimonial-slider").owlCarousel({
         items: 1,
         autoplay: false,
@@ -682,315 +700,6 @@ jQuery(function ($) {
             },
         }
     });
-    //gallery detail slider
-    $("#carousel-gallery-detail").owlCarousel({
-        items: 1,
-        autoplay: false,
-        mouseDrag: true,
-        loop: true,
-        margin: 0,
-        dots: false,
-        nav: true,
-        responsive: {
-            980: {
-                items: 1,
-            },
-            600: {
-                items: 1,
-            },
-            320: {
-                items: 1,
-            },
-        }
-    });
-    //main slider in pages
-    $("#testimonial-main-slider").owlCarousel({
-        items: 3,
-        autoplay: 2500,
-        autoplayHoverPause: true,
-        loop: true,
-        margin: 0,
-        dots: true,
-        nav: false,
-        responsive: {
-            1280: {
-                items: 3,
-            },
-            980: {
-                items: 3,
-            },
-            600: {
-                items: 2,
-            },
-            320: {
-                items: 1,
-            },
-        }
-    });
-
-    //main slider in pages
-    $("#price-slider").owlCarousel({
-        items: 3,
-        autoplay: false,
-        loop: false,
-        margin: 0,
-        padding: 0,
-        dots: true,
-        nav: false,
-        responsive: {
-            1280: {
-                items: 3,
-            },
-            980: {
-                items: 3,
-            },
-            600: {
-                items: 2,
-            },
-            0: {
-                items: 1,
-            },
-        }
-    });
-
-
-    /*Our Team*/
-    $("#ourteam-slider").owlCarousel({
-        items: 4,
-        margin: 0,
-        dots: false,
-        nav: false,
-        responsive: {
-            1280: {
-                items: 4,
-            },
-            768: {
-                items: 3,
-            },
-            520: {
-                items: 2,
-            },
-            0: {
-                items: 1,
-            },
-        }
-    });
-
-    /*Services Box Slider*/
-    $("#services-slider").owlCarousel({
-        autoplay: false,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
-        smartSpeed: 1200,
-        loop: true,
-        nav: false,
-        navText: false,
-        dots: false,
-        mouseDrag: true,
-        touchDrag: true,
-        center: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            640: {
-                items: 3
-            }
-        }
-    });
-    //service detail
-    $("#service-detail").owlCarousel({
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
-        smartSpeed: 1200,
-        loop: true,
-        nav: false,
-        dots: false,
-        mouseDrag: true,
-        touchDrag: true,
-        margin: 15,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            640: {
-                items: 2,
-            }
-        }
-    });
-    //shop detail dual carousel
-    let syncCont = $("#shop-dual-carousel");
-    let syncCarousel = $("#syncCarousel.owl-carousel");
-
-    if (syncCont) {
-        syncCont.append('<div class="owl-carousel carousel-shop-detail-inner owl-theme" id="syncChild"></div>');
-        let arrTotal = syncCarousel.find('.item').length - 1;
-        let item = '';
-        let syncChild = $("#syncChild");
-        for (let i = 0; i <= arrTotal; i++) {
-            item = syncCarousel.find('.item').eq(i).find('img').attr('src');
-            syncChild.append('<!-- Item ' + (i + 1) + '--><div class="item"><img src="' + item + '" alt=""></div>');
-        }
-    }
-
-
-    let syncChild = $("#syncChild.owl-carousel");
-
-    syncCarousel.owlCarousel({
-        singleItem: true,
-        items: 1,
-        dots: false,
-        slideSpeed: 1000,
-        mouseDrag: false,
-        nav: true,
-        pagination: false,
-        afterAction: syncPosition(),
-        responsiveRefreshRate: 200,
-    });
-
-    syncChild.owlCarousel({
-        items: 5,
-        pagination: false,
-        margin: 0,
-        dots: false,
-        afterAction: syncPosition(),
-    });
-
-    function syncPosition() {
-        setTimeout(function () {
-            syncChild.find(".owl-item").first().addClass("synced");
-        }, 300);
-    }
-
-    // Sync nav
-    syncCarousel.on('click', '.owl-next', function () {
-        let innerActive = syncChild.find('.owl-item.active:first').index();
-        let innerActiveLast = syncChild.find('.owl-item.active:last').index();
-        let innerActiveSynced = syncChild.find('.owl-item.active.synced').index();
-        let innerSynced = syncChild.find('.owl-item.synced').index();
-        if (innerActiveSynced === -1) {
-            if (innerActive > innerSynced) {
-                while (innerActive > innerSynced) {
-                    syncChild.trigger('prev.owl.carousel');
-                    innerSynced++;
-                }
-            } else if (innerActive < innerSynced) {
-                while (innerActive < innerSynced) {
-                    syncChild.trigger('next.owl.carousel');
-                    innerSynced--;
-                }
-            }
-        } else if (innerActiveSynced === innerActiveLast) {
-            syncChild.trigger('next.owl.carousel');
-        }
-        let itemBottom = syncChild.find('.owl-item.synced');
-        itemBottom.next().addClass('synced').siblings().removeClass('synced');
-    });
-    syncCarousel.on('click', '.owl-prev', function () {
-        let innerActive = syncChild.find('.owl-item.active:first').index();
-        let innerActiveSynced = syncChild.find('.owl-item.active.synced').index();
-        let innerSynced = syncChild.find('.owl-item.synced').index();
-        if (innerActiveSynced === -1) {
-            if (innerActive > innerSynced) {
-                while (innerActive > innerSynced - 2) {
-                    syncChild.trigger('prev.owl.carousel');
-                    innerSynced++;
-                }
-            } else if (innerActive < innerSynced) {
-                while (innerActive < innerSynced - 2) {
-                    syncChild.trigger('next.owl.carousel');
-                    innerSynced--;
-                }
-            }
-        } else if (innerActiveSynced === innerActive) {
-            syncChild.trigger('prev.owl.carousel');
-        }
-        let itemBottom = syncChild.find('.owl-item.synced');
-        itemBottom.prev().addClass('synced').siblings().removeClass('synced');
-    });
-
-    syncChild.on("click", ".owl-item", function () {
-        let number = $(this).index();
-        syncCarousel.trigger("to.owl.carousel", number, 300);
-        $(this).siblings().removeClass('synced');
-        $(this).addClass("synced");
-    });
-    //fancybox for shop
-    $('#syncCarousel [data-fancybox]').fancybox({
-        'transitionIn': 'elastic',
-        'transitionOut': 'elastic',
-        'speedIn': 600,
-        'speedOut': 200,
-        buttons: [
-            'slideShow',
-            'fullScreen',
-            'thumbs',
-            'share',
-            'download',
-            'zoom',
-            'close'
-        ],
-        afterShow: function () {
-            let number = this.index;
-            $(syncChild).add(syncCarousel).trigger("to.owl.carousel", number, 300);
-            $('#syncChild .owl-item').removeClass("synced").eq(number).addClass('synced');
-        }
-    });
-    //hover effect on shop detail slider image : zooming effect
-    $("#syncCarousel .item").on('mousemove', function (e) {
-        $(this).find('img').css({
-            'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 + '%'
-        });
-    });
-    //shop cart item removing
-    $('#shop .btn-close').on('click', function (e) {
-        e.preventDefault();
-        let cartItem = $(this).parent().parent('tr');
-        if (cartItem.siblings().length > 0){
-            cartItem.fadeOut(300);
-            setTimeout(function () {
-                cartItem.remove();
-            },300)
-        }
-        else {
-            let r = confirm("Do You Want To Empty The Cart?");
-            if(r === true){
-                $('#cart').html('<div class="text-center"><h3 class="mb-4">Your Cart Is Empty...</h3>' +
-                    '<a href="shop.html" class="btn button gradient-btn">Go To Shop</a></div>');
-                let move = $(window).scrollTop();
-                move -=1;
-                $("html,body").animate({
-                    scrollTop: move
-                }, 10);
-            }
-        }
-    });
-    /*  ---------  gallery hover effect  ----------  */
-    $("#carousel-gallery-detail .item").on('mousemove', function (e) {
-        $(this).find('img').css({
-            'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 + '%'
-        });
-    });
-
-
-    /* ----------- Counters ---------- */
-    $(".counters").appear(function () {
-        $(".count_nums").countTo();
-    });
-
-
-    /* =====================================
-            Coming Soon Count Down
-    ====================================== */
-    let countDown = $(".count_down");
-    if (countDown.length) {
-        countDown.downCount({
-            // month / day / Year
-            date: '2/21/2021 12:00:00',
-            offset: +10
-        });
-    }
 
     /* =====================================
                 CubePortfolio

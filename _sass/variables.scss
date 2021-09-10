@@ -25,7 +25,7 @@ $light: $light-gray;
 
 $font-size-base: 1.1rem;
 
-$font-family-sans-serif:
+$font-family-body:
   // Our preferred web font
   "Lato",
   // Safari for macOS and iOS (San Francisco)
@@ -40,3 +40,25 @@ $font-family-sans-serif:
   "Helvetica Neue", Arial, sans-serif,
   // Emoji fonts
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+$font-family-heading:
+  // Our preferred web font
+  "Montserrat",
+  // Safari for macOS and iOS (San Francisco)
+  -apple-system,
+  // Chrome < 56 for macOS (San Francisco)
+  BlinkMacSystemFont,
+  // Windows
+  "Segoe UI",
+  // Android
+  "Roboto",
+  // Basic web fallback
+  "Helvetica Neue", Arial, sans-serif,
+  // Emoji fonts
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+$font-family-fontawesome:
+  // Our preferred web font
+  "Font Awesome 5 Free",
+  // Basic web fallback
+  serif;
