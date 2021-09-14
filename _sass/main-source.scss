@@ -195,6 +195,11 @@ button {
       color: $white;
       text-decoration: none;
     }
+
+    &.btn-dark {
+      color: $white;
+      text-decoration: none;
+    }
   }
 
   h2 {
@@ -247,6 +252,18 @@ button {
     &.cambridge-climate-charter {
       width: 600px;
       margin: 30px auto;
+    }
+
+    &.testimonial-wrapp {
+      h4 {
+        a {
+          text-decoration: none;
+        }
+      }
+
+      .testimonial-photo, .testimonial-photo > img {
+        border-radius: 0;
+      }
     }
   }
 }
@@ -2381,6 +2398,10 @@ a.dropdown-toggle::after {
       background: url(../images/backgrounds/bg-cookie-header.jpg) no-repeat;
   }
 
+  &.customer-header {
+      background: url(../images/backgrounds/bg-customer-header.jpg) no-repeat;
+  }
+
   &.ethics-header {
       background: url(../images/backgrounds/bg-ethics-header.jpg) no-repeat;
   }
@@ -3144,16 +3165,17 @@ iframe {
 
 .testimonial-wrapp .testimonial-photo,
 .testimonial-wrapp .testimonial-photo>img {
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -o-transition: 0.4s;
-    transition: 0.4s;
+  transform: scale(0.9);
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .testimonial-wrapp:hover img {
-    transform: scale(1.1) rotate(-10deg);
+    transform: scale(1.0);
 }
 
 h4.text-primary {
