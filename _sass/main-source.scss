@@ -187,6 +187,16 @@ button {
 }
 
 #single-column-page {
+  a {
+    color: $primary;
+    text-decoration: underline;
+
+    &.gradient-btn {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
   h2 {
     font-size: 1.5rem;
     padding-bottom: 1rem;
@@ -212,6 +222,11 @@ button {
   ul {
     list-style: disc;
     margin: 0 0 1rem 25px;
+
+    li.item-complete {
+      text-decoration: line-through;
+      color: $green;
+    }
   }
 
   ol {
@@ -228,9 +243,11 @@ button {
     margin-bottom: 1rem;
   }
 
-  a {
-    color: $primary;
-    text-decoration: underline;
+  div {
+    &.cambridge-climate-charter {
+      width: 600px;
+      margin: 30px auto;
+    }
   }
 }
 
@@ -2352,6 +2369,10 @@ a.dropdown-toggle::after {
       background: url(../images/rakib-images/bg-about-header.jpg) no-repeat;
   }
 
+  &.climate-header {
+      background: url(../images/rakib-images/bg-climate-header.jpg) no-repeat;
+  }
+
   &.contact-header {
       background: url(../images/rakib-images/bg-contact-header.jpg) no-repeat;
   }
@@ -2612,7 +2633,7 @@ iframe {
 }
 
 .process-wrapp li:hover {
-    cursor: pointer;
+    cursor: default;
 }
 
 .process-wrapp li>.pro-step {
