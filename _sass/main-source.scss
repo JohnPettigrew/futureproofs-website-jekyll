@@ -2396,6 +2396,10 @@ a.dropdown-toggle::after {
   background-attachment: fixed;
   width: 100%;
 
+  &.error-404-header {
+      background: url(../images/backgrounds/bg-404-header.jpg) no-repeat;
+  }
+
   &.about-header {
       background: url(../images/backgrounds/bg-about-header.jpg) no-repeat;
   }
