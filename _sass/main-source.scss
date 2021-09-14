@@ -1,74 +1,3 @@
-/* ===================================
-                About
-   =================================== */
-
-/*
-    Theme Name: Rakib Logistic
-    Theme URI:
-    Author: Abusayed Shuvo
-    Author URI:
-    Description: One Page , Multi Parallax Template
-    Tags: one page, multi page, multipurpose, parallax, creative, html5
-
- */
-
-/* ===================================
-          Table of Contents
-   =================================== */
-
-/*
-01 body
-02 Helper Classes
-   02-1 short codes
-   02-2 loader
-03 navigation
-04 owl & revolution
-05 Page header
-06 about_us
-   - key-messages-slider
-   - services-main
-   - Work Process
-   - App Features
-   - horizontal-section
-   - Counters
-   - Progress bars
-   - Faq Accordions
-07 Team
-  - team-content
-  - team-box
-  - overlay
-08 Testimonial
-09 gallery & Portfolio
-10 contact us & forms
-11 Partner
-12 contact us
-13 Our Blog
-14 404 Error
-15 Shop
-    - Cart
-    - Shop Main
-    - Shop Details & Blog
-        - Tabs Accordion
-        - Carousel
-        - Dates
-        - Account
-        - Pagination
-        - Comments
-        - Widget Newsletter
-        - Add Review Form
-        - Product Tags
-        - Side Bar Info
-        - Categories
-16 coming soon
-17 Pricing Table
-18 Footer
-19 Media Queries
-
-/*Table Of Contents ends */
-
-
-/*Global Styling*/
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800|Lato:300,400,700');
 
 body {
@@ -263,6 +192,36 @@ button {
 
       .testimonial-photo, .testimonial-photo > img {
         border-radius: 0;
+      }
+    }
+  }
+
+  .metric-boxes {
+    article {
+      text-align: center;
+      padding: 0;
+
+      .testimonial-wrapp {
+        padding: 0;
+
+        .quoted {
+          i {
+            font-size: 150%;
+            color: $white;
+            display: inline-block;
+            position: relative;
+            top: 2px;
+          }
+        }
+
+        #video-container {
+          margin: 0 auto;
+
+          #video {
+            margin: 0 auto;
+            display: block;
+          }
+        }
       }
     }
   }
@@ -2426,6 +2385,10 @@ a.dropdown-toggle::after {
 
   &.legal-header {
       background: url(../images/backgrounds/bg-legal-header.jpg) no-repeat;
+  }
+
+  &.pricing-header {
+      background: url(../images/backgrounds/bg-pricing-header.jpg) no-repeat;
   }
 
   &.privacy-header {
