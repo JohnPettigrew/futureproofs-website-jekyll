@@ -27,101 +27,6 @@ jQuery(function ($) {
     let $root = $("html, body");
     $('[data-toggle="tooltip"]').tooltip();
 
-    //Contact Us
-    $("#submit_btn").on(' click', function () {
-        let userName = $('input[name=userName]').val();
-        let userEmail = $('input[name=email]').val();
-        let companyName = $('input[name=companyName]').val();
-
-        //simple validation at client's end
-        let postData, output;
-        let proceed = true;
-        if (userName === "") {
-            proceed = false;
-        }
-        if (userEmail === "") {
-            proceed = false;
-        }
-
-
-        if (companyName === "") {
-            proceed = false;
-        }
-        //everything looks good! proceed...
-        if (proceed) {
-
-            //data to be sent to server
-            postData = {
-                'userName': userName,
-                'userEmail': userEmail,
-                'userMessage': companyName
-            };
-
-            //Ajax post data to server
-            $.post('contact.php', postData, function (response) {
-                //load json data from server and output message
-                if (response.type === 'error') {
-                    output = '<div class="alert-danger" style="padding:10px; margin-bottom:25px;">' + response.text + '</div>';
-                } else {
-                    output = '<div class="alert-success" style="padding:10px; margin-bottom:25px;">' + response.text + '</div>';
-                    //reset values in all input fields
-                    $('.getin_form input').val('');
-                    $('.getin_form textarea').val('');
-
-                }
-
-                $("#result").slideUp("fast").html(output).slideDown();
-            }, 'json');
-
-        } else {
-            output = '<div class="alert-danger" style="padding:10px; margin-bottom:25px;">Please provide the missing fields.</div>';
-            $("#result").slideUp("fast").html(output).slideDown();
-        }
-
-    });
-    /*rating stars*/
-    function fadeInStar(){
-        let starItem = $('#rattingIcon .fa-star.fas');
-        starItem.addClass('scale-star');
-        setTimeout(function () {
-            starItem.removeClass('scale-star');
-        }, 180);
-    };
-    let ratingText = $('#ratingText');
-
-    function fadeInStarText(n) {
-        ratingText.addClass('scale-price');
-        setTimeout(function () {
-            ratingText.removeClass('scale-price');
-            switch (n) {
-                case 0:
-                    ratingText.text('Poor!');
-                    break;
-                case 1:
-                    ratingText.text('Average!');
-                    break;
-                case 2:
-                    ratingText.text('Good!');
-                    break;
-                case 3:
-                    ratingText.text('Very Good!');
-                    break;
-                case 4:
-                    ratingText.text('Excellent!');
-            }
-        }, 180);
-    };
-
-    $("#rattingIcon .fa-star").on('click', function () {
-        let iconIndex = $(this).index();
-        $(this).addClass("fas").removeClass("far");
-        $(this).prevAll().addClass("fas").removeClass("far");
-        $(this).nextAll().addClass("far").removeClass("fas");
-        fadeInStar();
-        fadeInStarText(iconIndex);
-    });
-
-
     /*----- shop detail Tabs init -----*/
     $(function () {
         initTabsToAccordion();
@@ -228,7 +133,6 @@ jQuery(function ($) {
     }
 
     /* ----- Back to Top ----- */
-    $(body).append('<a href="#" class="back-top"><i class="fa fa-angle-up"></i></a>');
     let amountScrolled = 700;
     let backBtn = $("a.back-top");
     $window.on("scroll", function () {
