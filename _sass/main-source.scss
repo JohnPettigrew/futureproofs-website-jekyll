@@ -2366,27 +2366,31 @@ a.dropdown-toggle::after {
   width: 100%;
 
   &.about-header {
-      background: url(../images/rakib-images/bg-about-header.jpg) no-repeat;
+      background: url(../images/backgrounds/bg-about-header.jpg) no-repeat;
   }
 
   &.climate-header {
-      background: url(../images/rakib-images/bg-climate-header.jpg) no-repeat;
+      background: url(../images/backgrounds/bg-climate-header.jpg) no-repeat;
   }
 
   &.contact-header {
-      background: url(../images/rakib-images/bg-contact-header.jpg) no-repeat;
+      background: url(../images/backgrounds/bg-contact-header.jpg) no-repeat;
+  }
+
+  &.cookie-header {
+      background: url(../images/backgrounds/bg-cookie-header.jpg) no-repeat;
   }
 
   &.ethics-header {
-      background: url(../images/rakib-images/bg-blog2-header.jpg) no-repeat;
+      background: url(../images/backgrounds/bg-ethics-header.jpg) no-repeat;
   }
 
   &.legal-header {
-      background: url(../images/rakib-images/bg-blog-detail-header.jpg) no-repeat;
+      background: url(../images/backgrounds/bg-legal-header.jpg) no-repeat;
   }
 
   &.privacy-header {
-      background: url(../images/rakib-images/bg-blog-header.jpg) no-repeat;
+      background: url(../images/backgrounds/bg-privacy-header.jpg) no-repeat;
   }
 
   &.testimonial-bg {
