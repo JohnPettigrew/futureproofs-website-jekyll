@@ -538,7 +538,7 @@ jQuery(function ($) {
         smartSpeed: 1200,
         loop: true,
         nav: true,
-        navText: false,
+        navText: ["<div class='d-md-none'><i class='fa fa-chevron-left'></i></div>","<div class='d-md-none'><i class='fa fa-chevron-right'></i></div>"],
         dots: false,
         mouseDrag: true,
         touchDrag: true,
