@@ -129,6 +129,15 @@ button {
       color: $white;
       text-decoration: none;
     }
+
+    &.price-btn {
+      text-decoration: none;
+      color: $white;
+
+      &:hover {
+        color: $primary;
+      }
+    }
   }
 
   h2 {
@@ -157,9 +166,16 @@ button {
     list-style: disc;
     margin: 0 0 1rem 25px;
 
-    li.item-complete {
-      text-decoration: line-through;
-      color: $green;
+    &.pricing-list {
+      list-style: none;
+    }
+
+    li {
+      &.item-complete {
+        text-decoration: line-through;
+        color: $green;
+      }
+
     }
   }
 
@@ -192,6 +208,14 @@ button {
 
       .testimonial-photo, .testimonial-photo > img {
         border-radius: 0;
+      }
+    }
+
+    &.pricing-item {
+      .pricing-duration {
+        #annual {
+          display: none;
+        }
       }
     }
   }
@@ -2893,6 +2917,7 @@ iframe {
     padding: 0;
     background-color: transparent;
     border-bottom: none;
+    cursor: pointer;
 }
 
 .card-header .card-link {
@@ -4627,11 +4652,11 @@ form.findus .select:after {
     color: $secondary;
 }
 
-.whitebox .widget {
-    padding: 40px 30px;
-    background: $white;
-    -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+.widget {
+  padding: 40px 30px;
+  background: $white;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 .contact-box p {
@@ -4799,6 +4824,7 @@ ul.count_down.white li p:nth-child(2) {
     font-size: 14px;
     padding: 25px 0;
     display: inline-block;
+    list-style: none;
 }
 
 .pricing-list li {
@@ -4852,55 +4878,6 @@ ul.count_down.white li p:nth-child(2) {
 }
 
 
-/*price sale*/
-
-.pricing-item.sale::before,
-.shopping-box .sale::before {
-    content: '\f02e';
-    font-family: $font-family-fontawesome;
-    font-weight: 900;
-    position: absolute;
-    top: -28px;
-    right: 15px;
-    font-size: 60px;
-    color: $secondary;
-    z-index: 1;
-}
-
-.pricing-item.gray.sale::before {
-    color: $dark-gray;
-}
-
-.shopping-box .sale::before {
-    z-index: 100;
-}
-
-.pricing-item.sale::after,
-.shopping-box .sale::after {
-    content: "- " attr(data-sale) "%";
-    position: absolute;
-    top: 6px;
-    right: 19px;
-    font-size: 14px;
-    color: $white;
-    z-index: 2;
-}
-
-.shopping-box .sale::after {
-    z-index: 101;
-}
-
-.pricing-item.sale:hover::after,
-.shopping-box .sale:hover::after {
-    content: 'Sale';
-    right: 23px;
-    color: $primary;
-}
-.pricing-item.sale:hover::before,
-.shopping-box .sale:hover::before {
-    color: $white;
-}
-
 .pricing-list li::before,
 .price-included::before {
     content: '\f00c';
@@ -4924,9 +4901,16 @@ ul.count_down.white li p:nth-child(2) {
     left: -23px;
     color: $secondary;
 }
+
 .pricing-list li.price-not{
     text-decoration: line-through;
+    color: $secondary;
 }
+
+.pricing-item.active .pricing-list li{
+    color: $white;
+}
+
 .pricing-item.active .pricing-list li::before{
     color: $white;
 }
@@ -4940,7 +4924,7 @@ ul.count_down.white li p:nth-child(2) {
     display: inline-flex;
 }
 
-.price-toggle-wrapper .Pricing-toggle-button {
+.price-toggle-wrapper .pricing-toggle-button {
     padding: 10px 110px;
     user-select: none;
     cursor: pointer;
@@ -4954,12 +4938,12 @@ ul.count_down.white li p:nth-child(2) {
     transition: 0.3s;
 }
 
-.price-toggle-wrapper .Pricing-toggle-button.active {
+.price-toggle-wrapper .pricing-toggle-button.active {
     color: $white;
     cursor: default;
 }
 
-.price-toggle-wrapper .Pricing-toggle-button.month::before {
+.price-toggle-wrapper .pricing-toggle-button.month::before {
     content: '';
     position: absolute;
     width: 105%;
@@ -4983,7 +4967,7 @@ ul.count_down.white li p:nth-child(2) {
     background-position: right center;
 }
 
-.price-toggle-wrapper .Pricing-toggle-button.month.active::before {
+.price-toggle-wrapper .pricing-toggle-button.month.active::before {
     transform: translateX(-5%);
     background-position: left center;
 }
@@ -5003,7 +4987,7 @@ ul.count_down.white li p:nth-child(2) {
     .pricing-list li {
         font-size: 0.9375rem;
     }
-    .price-toggle-wrapper .Pricing-toggle-button {
+    .price-toggle-wrapper .pricing-toggle-button {
         padding: 10px 70px;
     }
     .testi-box .top90 {
@@ -5012,14 +4996,14 @@ ul.count_down.white li p:nth-child(2) {
 }
 
 @media (max-width: 767px) {
-    .price-toggle-wrapper .Pricing-toggle-button {
+    .price-toggle-wrapper .pricing-toggle-button {
         padding: 10px 40px;
         font-size: 13px;
     }
 }
 
 @media (max-width: 576px) {
-    .price-toggle-wrapper .Pricing-toggle-button {
+    .price-toggle-wrapper .pricing-toggle-button {
         padding: 10px 30px;
     }
     .carousel-shop-detail .owl-nav button,

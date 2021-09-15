@@ -1,305 +1,205 @@
 ---
-layout: default-with-testimonials
-title: Pricing
+layout: single-column-page
+title: How much does it cost?
+subtitle: Simple pricing that scales with you
+banner-type: pricing
 ---
 
-<section class="wrapper content index-features single-column-content">
-  <h1 class="pt-5">Simple pricing that scales with you</h1>
-  <h3 class="col-12 col-md-9 col-lg-6 m-auto">Monthly and annual subscriptions<br />based on your publishing volume</h3>
-
-  <div class="col-12 col-md-6 ml-auto mr-auto mt-5">
-    <p class="text-center">Our plans all give you full access to both the application and our support team. The only difference is in how much content you can work on.</p>
-    <p class="text-center pb-0">
-      <strong>Intro</strong> lets you test the waters.<br />
-      <strong>Pro</strong> gives more pages and training.<br />
-      <strong>Enterprise</strong> is for when you have particular needs and integration requirements.
-    </p>
-  </div>
-  <h2 class="mb-0">Choose your plan</h2>
-  <div class="col-12 col-md-6 ml-auto mr-auto mt-0 pricing-toggles">
-    <form class="model-switch">
-      <span class="toggle-left">Pay monthly</span>
-      <label class="switch">
-        <input id="priceToggle" type="checkbox" checked>
-        <span class="slider round"></span>
-      </label>
-      <span class="toggle-right">Pay annually</span>
-    </form>
-    <form class="volume-slider">
-      <label class="volume-label mb-2">How much do you publish each month?</label>
-      <input id="priceVolume" type="range" name="pages-per-month" min="500" max="3000" value="500" step="500" class="volume">
-      <label class="volume-label"><span id="priceOutput">500</span> pages</label>
-    </form>
-  </div>
-
-  <h2 class="mt-5 mb-0">See your pricing</h2>
-  <div id="pricing-table">
-    <table class="table-hover">
-      <thead>
-        <tr>
-          <th scope="col">
-            <p class="plan">Intro</p>
-            <p class="price">£169</p>
-            <p class="message">per month</p>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            200 <span class="text-muted">pages per month</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Unlimited <span class="text-muted">projects</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            1 hour <span class="text-muted">of training</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span class="text-muted">Additional training: £50 per hour</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span class="text-muted">Live support for all users</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span class="text-muted">Pay by credit card or direct debit</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p class="mt-4 mb-4 text-center"><a class="cta btn btn-dark" href="https://www.futureproofs.net">Join Futureproofs</a></p>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-    <table class="table-hover">
-      <thead class="primary">
-        <tr>
-          <th scope="col">
-            <p class="plan">Pro</p>
-            <p class="price">£<span id="calculatedPrice">329</span></p>
-            <p class="message">per month<span id="annual"> (paid annually)</span></p>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <span id="planPages">500&ndash;3000</span> <span class="text-muted">pages per month</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Unlimited <span class="text-muted">projects</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            2 hours <span class="text-muted">of training per year</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span class="text-muted">Additional training: £50 per hour</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span class="text-muted">Live support for all users</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span class="text-muted">Pay by credit card or direct debit</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p class="mt-4 mb-4 text-center"><a class="cta btn btn-primary" href="https://www.futureproofs.net">Join Futureproofs</a></p>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <table class="table-hover">
-      <thead>
-        <tr>
-          <th scope="col">
-            <p class="plan">Enterprise</p>
-            <p class="price">&nbsp;</p>
-            <p class="message">Contact us for pricing</p>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            Custom <span class="text-muted">pages per month</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Unlimited <span class="text-muted">projects</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Custom <span class="text-muted">training</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Custom <span class="text-muted">support plans</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Custom <span class="text-muted">system integrations</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Custom <span class="text-muted">payment options</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p class="mt-4 mb-4 text-center"><a class="cta btn btn-dark" href="https://www.futureproofs.net">Join Futureproofs</a></p>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h2>Pay for only what you need</h2>
-  <p class="col-12 col-md-9 col-lg-6 m-auto summary">Run a pilot with our Intro plan: all the tools you need to see how Futureproofs can work for you. Like all our plans, it covers as many people as you need, and includes the training and support you need to get started.</p>
-  <p class="col-12 col-md-9 col-lg-6 m-auto summary">As your needs grow, move up to the Pro plan. Work with confidence knowing that your bill is completely predictable, but with the flexibility to scale up as your business grows.</p>
-
-  <h2>FAQs</h2>
-  <div id="accordion">
-    <div class="card item1">
-      <div class="card-header" id="item1">
-        <h5 class="mb-0">
-          <button class="btn btn-link" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-            How do page allowances work?
-          </button>
-        </h5>
+<section id="single-column-page" class="bg-light padding_top padding_bottom_half">
+  <div class="container">
+    <div class="text-center">
+      <div class="heading-title wow fadeInUp" data-wow-delay="300ms">
+        <h2>Monthly and annual subscriptions</h2>
+        <p>based on your publishing volume</p>
       </div>
-      <div id="collapse1" class="collapse show" aria-labelledby="item1" data-parent="#accordion">
-        <div class="card-body">
-          Your subscription is based on your publishing volume &ndash; the number of pages you publish, not the number of proofs you upload. Each plan includes a monthly allowance that you can upload against (much like a mobile-phone plan). If you don't use your page allowance, it will roll over to the next month (and the next, and the next&hellip;).<br /><br />
-          For example, if you pay for 500 pages of new content each month, this would let you work on two new 192-page books every month. The 'spare' 108 pages remain available for 3 months (if you pay monthly) or a year (if you pay annually). That way, you're covered when you have a busy month &ndash; which we all know happen regularly!
+    </div>
+    <div class="text-center mb-4 mt-5">
+      <div class="price-toggle-wrapper">
+        <span class="pricing-toggle-button month active">Monthly</span>
+        <span class="pricing-toggle-button year">Annual</span>
+      </div>
+    </div>
+    <div class="row" id="price-table">
+      <div class="item col-12 col-lg-4">
+        <div class="pricing-item wow fadeInLeft animated" data-wow-delay="300ms">
+          <h3 class="font-light">Intro</h3>
+          <p class="bottom30">For our smallest customers</p>
+          <div class="pricing-price"><span class="pricing-currency">£169</span> /<span class="pricing-duration">month</span></div>
+          <ul class="pricing-list">
+            <li><strong>200</strong> pages per month</li>
+            <li>Unlimited projects</li>
+            <li>Basic setup and training</li>
+            <li class="price-not">Ongoing training</li>
+            <li>Live support for all users</li>
+            <li>New features for free <sup><i class="fa fa-sm fa-plus"></i></sup></li>
+            <li class="price-not">Custom workflow analysis</li>
+            <li class="price-not">Custom integrations</li>
+          </ul>
+          <a class="button price-btn" href="https://www.futureproofs.net/">Join Futureproofs</a>
+        </div>
+      </div>
+      <div class="item col-12 col-lg-4">
+        <div class="pricing-item wow fadeInUp animated active" data-wow-delay="300ms">
+          <h3 class="font-light">Pro</h3>
+          <p class="bottom30">For most customers</p>
+          <div class="pricing-price"><span id="calculatedPrice" class="pricing-currency">£329</span> /<span class="pricing-duration">month <span id="annual"> (paid annually)</span></span></div>
+          <ul class="pricing-list">
+            <li>From <strong><span id="planPages">500</span></strong> pages per month</li>
+            <li>Unlimited projects</li>
+            <li>Basic setup and training</li>
+            <li>Ongoing training <sup><i class="fa fa-sm fa-asterisk"></i></sup></li>
+            <li>Live support for all users</li>
+            <li>New features for free <sup><i class="fa fa-sm fa-plus"></i></sup></li>
+            <li>Custom workflow analysis <sup><i class="far fa-sm fa-star"></i></sup></li>
+            <li class="price-not">Custom integrations</li>
+          </ul>
+          <a class="button price-btn" href="https://www.futureproofs.net/">Join Futureproofs</a>
+        </div>
+      </div>
+      <div class="item col-12 col-lg-4">
+        <div class="pricing-item wow fadeInRight animated" data-wow-delay="300ms">
+          <h3 class="font-light">Enterprise</h3>
+          <p class="bottom30">For our largest customers</p>
+          <div class="pricing-price"><span id="calculatedPrice" class="pricing-currency">&nbsp;</span>Contact us for pricing</div>
+          <ul class="pricing-list">
+            <li><strong>Custom</strong> pages per month</li>
+            <li>Unlimited projects</li>
+            <li>Custom initial training</li>
+            <li>Ongoing training <sup><i class="fa fa-sm fa-asterisk"></i></sup></li>
+            <li>Live support for all users</li>
+            <li>New features for free <sup><i class="fa fa-sm fa-plus"></i></sup></li>
+            <li>Custom workflow analysis <sup><i class="far fa-sm fa-star"></i></sup></li>
+            <li>Custom integrations <sup><i class="far fa-sm fa-star"></i></sup></li>
+          </ul>
+          <a class="button price-btn" href="https://www.futureproofs.net/">Join Futureproofs</a>
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header" id="training-included">
-        <h5 class="mb-0">
-          <button class="btn btn-link" data-toggle="collapse" data-target="#training-included-item" aria-expanded="false" aria-controls="training-included-item">
+    <div class="pricing-item wow fadeInUp animated text-left" data-wow-delay="300ms">
+      <p><sup><i class="fa fa-sm fa-asterisk"></i></sup> Additional cost may apply, depending on number of sessions and subscription level. Extra training sessions (by video) cost £100 per hour.</p>
+      <p><sup><i class="fa fa-sm fa-plus"></i></sup> New features are delivered for free as they are developed as part of your subscription. If your team wants custom features then we charge £750-1000 a day, depending on complexity.</p>
+      <p><sup><i class="far fa-sm fa-star"></i></sup> Additional costs apply depending on the scope of work requested. Consultancy, custom training, and advanced workflow review and migration services: £700 per day.</p>
+    </div>
+  </div>
+</section>
+
+<section id="ourfaq" class="bg-white position-relative padding">
+  <div class="container">
+    <div class="col-md-12 text-center animated wow fadeIn" data-wow-delay="300ms">
+      <h2 class="heading bottom30 font-light2">
+        Frequently Asked <span class="font-normal">Questions</span>
+      </h2>
+    </div>
+    <div id="accordion">
+      <div class="card item1">
+        <div class="card-header" id="item1">
+            <a class="card-link" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+              How do page allowances work?
+            </a>
+        </div>
+        <div id="collapse1" class="collapse show" aria-labelledby="item1" data-parent="#accordion">
+          <div class="card-body">
+            Your subscription is based on your publishing volume &ndash; the number of pages you publish, not the number of proofs you upload. Each plan includes a monthly allowance that you can upload against (much like a mobile-phone plan). If you
+            don't use your page allowance, it will roll over to the next month (and the next, and the next&hellip;).<br /><br />
+            For example, if you pay for 500 pages of new content each month, this would let you work on two new 192-page books every month. The 'spare' 108 pages remain available for 3 months (if you pay monthly) or a year (if you pay annually). That
+            way, you're covered when you have a busy month &ndash; which we all know happen regularly!
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="training-included">
+          <a class="card-link" data-toggle="collapse" data-target="#training-included-item" aria-expanded="false" aria-controls="training-included-item">
             Do you provide training?
-          </button>
-        </h5>
-      </div>
-      <div id="training-included-item" class="collapse" aria-labelledby="training-included" data-parent="#accordion">
-        <div class="card-body">
-          All our subscription plans include hands-on training, which we can deliver in person or by video. <strong>(At present, during the coronavirus restrictions, all training is by video only.)</strong> If you have a large team, we can provide additional or custom training sessions, as well as training-the-trainers and in-house programme development.<br /><br />
-          We strongly recommend that all software deployments include an appropriate emphasis on training the teams beforehand. Although Futureproofs is designed to be easy to use, all change needs suitable support and guidance. If you are a larger organisation, this is even more important, and we may include additional training in our quotes after consultation with you and your team.
+          </a>
+        </div>
+        <div id="training-included-item" class="collapse" aria-labelledby="training-included" data-parent="#accordion">
+          <div class="card-body">
+            All our subscription plans include hands-on training, which we can deliver in person or by video. <strong>(At present, during the coronavirus restrictions, all training is by video only.)</strong> If you have a large team, we can provide
+            additional or custom training sessions, as well as training-the-trainers and in-house programme development.<br /><br />
+            We strongly recommend that all software deployments include an appropriate emphasis on training the teams beforehand. Although Futureproofs is designed to be easy to use, all change needs suitable support and guidance. If you are a larger
+            organisation, this is even more important, and we may include additional training in our quotes after consultation with you and your team.
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="payment-method-item">
-        <h5 class="mb-0">
-          <button class="btn btn-link" data-toggle="collapse" data-target="#payment-method" aria-expanded="true" aria-controls="payment-method">
+      <div class="card">
+        <div class="card-header" id="payment-method-item">
+          <a class="card-link" data-toggle="collapse" data-target="#payment-method" aria-expanded="true" aria-controls="payment-method">
             What payment methods do you accept?
-          </button>
-        </h5>
-      </div>
-      <div id="payment-method" class="collapse" aria-labelledby="payment-method-item" data-parent="#accordion">
-        <div class="card-body">
-          For monthly subscription plans, we take payment monthly by credit card or direct debit/ACH. For annual plans, we also accept payment by direct transfer to our bank account (details supplied on invoice). We do not accept payment by cheque/check under any circumstances.<br /><br />
-          We send an invoice (including VAT where appropriate) before we take payment in all cases, for your records.
+          </a>
+        </div>
+        <div id="payment-method" class="collapse" aria-labelledby="payment-method-item" data-parent="#accordion">
+          <div class="card-body">
+            For monthly subscription plans, we take payment monthly by credit card or direct debit/ACH. For annual plans, we also accept payment by direct transfer to our bank account (details supplied on invoice). We do not accept payment by
+            cheque/check under any circumstances.<br /><br />
+            We send an invoice (including VAT where appropriate) before we take payment in all cases, for your records.
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="item2">
-        <h5 class="mb-0">
-          <button class="btn btn-link" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
-            What if I don't use my whole allowance?
-          </button>
-        </h5>
-      </div>
-      <div id="collapse2" class="collapse" aria-labelledby="item2" data-parent="#accordion">
-        <div class="card-body">
-          If you have some pages left at the end of the month, they will roll over and be added to your total the following month. So, if you are on the Intro plan and have 30 pages left at the end of a month (i.e. you only used 170 pages), then you will have 230 pages at the start of the following month. Unused pages roll over for 3 months (if you are paying monthly) or 12 months (if you are paying annually).
+      <div class="card">
+        <div class="card-header" id="item2">
+            <a class="card-link" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+              What if I don't use my whole allowance?
+            </a>
+        </div>
+        <div id="collapse2" class="collapse" aria-labelledby="item2" data-parent="#accordion">
+          <div class="card-body">
+            If you have some pages left at the end of the month, they will roll over and be added to your total the following month. So, if you are on the Intro plan and have 30 pages left at the end of a month (i.e. you only used 170 pages), then
+            you will have 230 pages at the start of the following month. Unused pages roll over for 3 months (if you are paying monthly) or 12 months (if you are paying annually).
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="item3">
-        <h5 class="mb-0">
-          <button class="btn btn-link" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
-            What if I need more pages?
-          </button>
-        </h5>
-      </div>
-      <div id="collapse3" class="collapse" aria-labelledby="item3" data-parent="#accordion">
-        <div class="card-body">
-          If you're using Futureproofs more than you expected, you can easily upgrade at any point. However, we won't just cut you off. All our plans are based on your average usage, not your peak, so if you have a busy month then that's fine with us. And, if you do go over your allowance unexpectedly, just let us know and we'll sort you out!
+      <div class="card">
+        <div class="card-header" id="item3">
+            <a class="card-link" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+              What if I need more pages?
+            </a>
+        </div>
+        <div id="collapse3" class="collapse" aria-labelledby="item3" data-parent="#accordion">
+          <div class="card-body">
+            If you're using Futureproofs more than you expected, you can easily upgrade at any point. However, we won't just cut you off. All our plans are based on your average usage, not your peak, so if you have a busy month then that's fine with
+            us. And, if you do go over your allowance unexpectedly, just let us know and we'll sort you out!
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="item4">
-        <h5 class="mb-0">
-          <button class="btn btn-link" data-toggle="collapse" data-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
-            How does invoicing work?
-          </button>
-        </h5>
-      </div>
-      <div id="collapse4" class="collapse" aria-labelledby="item4" data-parent="#accordion">
-        <div class="card-body">
-          You will receive an invoice every month (including VAT where appropriate) and your payment will be taken automatically by your chosen method (direct debit or credit card). If we don't receive payment within 30 days of our invoice, you may lose access to the Futureproofs service, so we recommend making sure your credit card or direct debit information are correct at all times.
+      <div class="card">
+        <div class="card-header" id="item4">
+            <a class="card-link" data-toggle="collapse" data-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
+              How does invoicing work?
+            </a>
+        </div>
+        <div id="collapse4" class="collapse" aria-labelledby="item4" data-parent="#accordion">
+          <div class="card-body">
+            You will receive an invoice every month (including VAT where appropriate) and your payment will be taken automatically by your chosen method (direct debit or credit card). If we don't receive payment within 30 days of our invoice, you may
+            lose access to the Futureproofs service, so we recommend making sure your credit card or direct debit information are correct at all times.
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="item5">
-        <h5 class="mb-0">
-          <button class="btn btn-link" data-toggle="collapse" data-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
-            Can I stop my subscription?
-          </button>
-        </h5>
-      </div>
-      <div id="collapse5" class="collapse" aria-labelledby="item5" data-parent="#accordion">
-        <div class="card-body">
-          All our plans renew automatically and we hope that you will be happy with the Futureproofs service. However, if you do choose to leave us, just let us know at least 14 days before your next invoice is due. If you give us less notice than this, be aware that a final payment will be required.
+      <div class="card">
+        <div class="card-header" id="item5">
+            <a class="card-link" data-toggle="collapse" data-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
+              Can I stop my subscription?
+            </a>
+        </div>
+        <div id="collapse5" class="collapse" aria-labelledby="item5" data-parent="#accordion">
+          <div class="card-body">
+            All our plans renew automatically and we hope that you will be happy with the Futureproofs service. However, if you do choose to leave us, just let us know at least 14 days before your next invoice is due. If you give us less notice than
+            this, be aware that a final payment will be required.
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="item6">
-        <h5 class="mb-0">
-          <button class="btn btn-link" data-toggle="collapse" data-target="#collapse6" aria-expanded="true" aria-controls="collapse6">
-            What happens when I stop my subscription?
-          </button>
-        </h5>
-      </div>
-      <div id="collapse6" class="collapse" aria-labelledby="item6" data-parent="#accordion">
-        <div class="card-body">
-          When your subscription ends, you continue to have access to existing projects and proofs. However, you will lose two key things: any surplus pages you've built up over the course of your subscription; and the ability to upload new proofs to your projects.<br /><br />
-          However, you and your team <i>can</i> continue to work on any proofs that have already been uploaded to the site. This means adding new markup, continuing conversations in queries, collating master proofs and reviewing them in designer mode.
+      <div class="card">
+        <div class="card-header" id="item6">
+            <a class="card-link" data-toggle="collapse" data-target="#collapse6" aria-expanded="true" aria-controls="collapse6">
+              What happens when I stop my subscription?
+            </a>
+        </div>
+        <div id="collapse6" class="collapse" aria-labelledby="item6" data-parent="#accordion">
+          <div class="card-body">
+            When your subscription ends, you continue to have access to existing projects and proofs. However, you will lose two key things: any surplus pages you've built up over the course of your subscription; and the ability to upload new proofs
+            to your projects.<br /><br />
+            However, you and your team <i>can</i> continue to work on any proofs that have already been uploaded to the site. This means adding new markup, continuing conversations in queries, collating master proofs and reviewing them in designer
+            mode.
+          </div>
         </div>
       </div>
     </div>
