@@ -215,8 +215,6 @@ jQuery(function($) {
                Pricing table
      ===================================== */
 
-  // Define pricing
-
   function currentProSubPrice() {
     let value = 0;
     let basePrice, incrementPrice;
@@ -254,9 +252,7 @@ jQuery(function($) {
 
   $('.pricing-toggle-button').on('click', function() {
     let volume = $("#priceVolume").val();
-    if (!$(this).hasClass('active')) {
-      $(this).addClass('active').siblings().removeClass('active');
-    }
+    if (!$(this).hasClass('active')) { $(this).addClass('active').siblings().removeClass('active'); }
     $('#calculatedPrice').html("£" + currentProSubPrice());
   });
 
@@ -264,6 +260,7 @@ jQuery(function($) {
     let volume = $("#priceVolume").val();
     $('#priceOutput').html(volume);
     $('#planPages').html(volume);
+    $('#calculatedPrice').html("£" + currentProSubPrice());
   });
 
   $('.pricing-item').on('mouseenter', function() {

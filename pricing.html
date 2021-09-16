@@ -10,7 +10,8 @@ banner-type: pricing
     <div class="text-center">
       <div class="heading-title wow fadeInUp" data-wow-delay="300ms">
         <h2>Monthly and annual subscriptions</h2>
-        <p>based on your publishing volume</p>
+        <p>Indicate your preference for paying annually (for a discount!) or monthly, and the average number of pages you publish each month.</p>
+        <p>We use the average because we know that everyone's volume goes up and down during the year, and paying at the peak level would be unfair!<br />To find out more, <a href="#faqs">see the FAQs below</a>.</p>
       </div>
     </div>
     <div class="text-center mb-4 mt-5">
@@ -18,13 +19,15 @@ banner-type: pricing
         <span id="monthly" class="pricing-toggle-button month">Monthly</span>
         <span id="annually" class="pricing-toggle-button year active">Annual</span>
       </div>
+    </div>
+    <div class="text-center mb-4 mt-5 price-volume-card">
+      <p>Pages per month, on average</p>
       <div class="price-volume-wrapper">
         <form class="volume-slider">
-          <label class="volume-label">How much do you publish each month?</label>
           <input id="priceVolume" type="range" name="pages-per-month" min="500" max="3000" value="500" step="500" class="volume">
-          <label class="volume-label"><span id="priceOutput">500</span> pages</label>
         </form>
       </div>
+      <p><span id="priceOutput">500</span> pages</p>
     </div>
     <div class="row" id="price-table">
       <div class="item col-12 col-lg-4">
@@ -46,7 +49,7 @@ banner-type: pricing
         </div>
       </div>
       <div class="item col-12 col-lg-4">
-        <div class="pricing-item wow fadeInUp animated active" data-wow-delay="300ms">
+        <div class="pricing-item wow fadeInUp animated selected active" data-wow-delay="300ms">
           <h3 class="font-light">Pro</h3>
           <p class="bottom30">For most customers</p>
           <div class="pricing-price"><span id="calculatedPrice" class="pricing-currency">£329</span> /<span class="pricing-duration">month</span></div>
@@ -92,6 +95,7 @@ banner-type: pricing
 
 <section id="ourfaq" class="bg-white position-relative padding">
   <div class="container">
+    <a name="faqs"></a>
     <div class="col-md-12 text-center animated wow fadeIn" data-wow-delay="300ms">
       <h2 class="heading bottom30 font-light2">
         Frequently Asked <span class="font-normal">Questions</span>
