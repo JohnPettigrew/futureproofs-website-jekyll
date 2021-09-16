@@ -217,45 +217,53 @@ jQuery(function($) {
 
   // Define pricing
 
-  const priceBaseMonthly = 379;
-  const priceIncrementMonthly = 329;
-  const priceBaseAnnual = 329;
-  const priceIncrementAnnual = 279;
-  let monthlyPricingMap = new Map();
-  setPricingMapMonthly()
-  let annualPricingMap = new Map();
-  setPricingMapAnnual()
-
-  //Sets pricingMap to contain the monthly prices
-  function setPricingMapMonthly() {
-    monthlyPricingMap.set(500, priceBaseMonthly);
-    monthlyPricingMap.set(1000, priceBaseMonthly + priceIncrementMonthly);
-    monthlyPricingMap.set(1500, priceBaseMonthly + priceIncrementMonthly * 2);
-    monthlyPricingMap.set(2000, priceBaseMonthly + priceIncrementMonthly * 3);
-    monthlyPricingMap.set(2500, priceBaseMonthly + priceIncrementMonthly * 4);
-    monthlyPricingMap.set(3000, priceBaseMonthly + priceIncrementMonthly * 5);
-  }
-
-  //Sets pricingMap to contain the annual prices
-  function setPricingMapAnnual() {
-    annualPricingMap.set(500, priceBaseAnnual);
-    annualPricingMap.set(1000, priceBaseAnnual + priceIncrementAnnual);
-    annualPricingMap.set(1500, priceBaseAnnual + priceIncrementAnnual * 2);
-    annualPricingMap.set(2000, priceBaseAnnual + priceIncrementAnnual * 3);
-    annualPricingMap.set(2500, priceBaseAnnual + priceIncrementAnnual * 4);
-    annualPricingMap.set(3000, priceBaseAnnual + priceIncrementAnnual * 5);
+  function currentProSubPrice() {
+    let value = 0;
+    let basePrice, incrementPrice;
+    if ($('#annually').hasClass('active')) {
+      basePrice = 329; // When Annual sub is selected
+      incrementPrice = 279;
+    } else {
+      basePrice = 379; // When Monthly sub is selected
+      incrementPrice = 329;
+    }
+    switch (parseInt($("#priceVolume").val())) {
+      case 500:
+        value = basePrice;
+        break;
+      case 1000:
+        value = basePrice + incrementPrice;
+        break;
+      case 1500:
+        value = basePrice + incrementPrice * 2;
+        break;
+      case 2000:
+        value = basePrice + incrementPrice * 3;
+        break;
+      case 2500:
+        value = basePrice + incrementPrice * 4;
+        break;
+      case 3000:
+        value = basePrice + incrementPrice * 5;
+        break;
+      default:
+        break;
+    }
+    return value;
   }
 
   $('.pricing-toggle-button').on('click', function() {
-    let volume = document.getElementById("priceVolume").value;
+    let volume = $("#priceVolume").val();
     if (!$(this).hasClass('active')) {
       $(this).addClass('active').siblings().removeClass('active');
     }
-    if ($('#annually').hasClass('active')) {
-      $('#calculatedPrice').html("£" + annualPricingMap.get(Number(volume)));
-    } else {
-      $('#calculatedPrice').html("£" + monthlyPricingMap.get(Number(volume)));
-    }
+    $('#calculatedPrice').html("£" + currentProSubPrice());
+  });
+
+  $('#priceVolume').on('click', function() {
+    let volume = $("#priceVolume").val();
+    $('#priceOutput').html(volume);
+    $('#planPages').html(volume);
   });
 
   $('.pricing-item').on('mouseenter', function() {
