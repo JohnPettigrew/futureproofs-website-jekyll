@@ -35,12 +35,10 @@ function setPricingModel() {
   //First, set up the pricingMap for the chosen method of payment
   if (document.getElementById("priceToggle").checked) {        //true = annual pricing
     setPricingMapAnnual();
-    document.getElementById("calculatedPrice").innerHTML = pricingMap.get(Number(volume));
-    document.getElementById("annual").innerHTML=" (paid annually)";
+    document.getElementById("calculatedPrice").innerHTML = "£" + pricingMap.get(Number(volume));
   } else {                                                     //false = monthly pricing
     setPricingMapMonthly();
-    document.getElementById("calculatedPrice").innerHTML = pricingMap.get(Number(volume));
-    document.getElementById("annual").innerHTML="";
+    document.getElementById("calculatedPrice").innerHTML = "£" + pricingMap.get(Number(volume));
   };
 }
 

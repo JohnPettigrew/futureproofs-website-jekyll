@@ -15,8 +15,15 @@ banner-type: pricing
     </div>
     <div class="text-center mb-4 mt-5">
       <div class="price-toggle-wrapper">
-        <span class="pricing-toggle-button month active">Monthly</span>
-        <span class="pricing-toggle-button year">Annual</span>
+        <span id="monthly" class="pricing-toggle-button month">Monthly</span>
+        <span id="annually" class="pricing-toggle-button year active">Annual</span>
+      </div>
+      <div class="price-volume-wrapper">
+        <form class="volume-slider">
+          <label class="volume-label">How much do you publish each month?</label>
+          <input id="priceVolume" type="range" name="pages-per-month" min="500" max="3000" value="500" step="500" class="volume">
+          <label class="volume-label"><span id="priceOutput">500</span> pages</label>
+        </form>
       </div>
     </div>
     <div class="row" id="price-table">
@@ -42,7 +49,7 @@ banner-type: pricing
         <div class="pricing-item wow fadeInUp animated active" data-wow-delay="300ms">
           <h3 class="font-light">Pro</h3>
           <p class="bottom30">For most customers</p>
-          <div class="pricing-price"><span id="calculatedPrice" class="pricing-currency">£329</span> /<span class="pricing-duration">month <span id="annual"> (paid annually)</span></span></div>
+          <div class="pricing-price"><span id="calculatedPrice" class="pricing-currency">£329</span> /<span class="pricing-duration">month</span></div>
           <ul class="pricing-list">
             <li>From <strong><span id="planPages">500</span></strong> pages per month</li>
             <li>Unlimited projects</li>
@@ -205,5 +212,3 @@ banner-type: pricing
     </div>
   </div>
 </section>
-
-<script src="/js/pricing-toggle.js"></script>

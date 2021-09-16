@@ -212,12 +212,6 @@ button {
     }
 
     &.pricing-item {
-      .pricing-duration {
-        #annual {
-          display: none;
-        }
-      }
-
       .fa-sm {
         transform: scale(60%);
       }
