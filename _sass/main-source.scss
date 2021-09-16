@@ -2410,7 +2410,15 @@ a.dropdown-toggle::after {
   }
 
   &.pricing-header {
-      background: url(../images/backgrounds/bg-pricing-header.jpg) no-repeat;
+      background: url(../images/backgrounds/bg-pricing-header.jpg) no-repeat right top;
+      background-size: cover;
+  }
+
+  @media screen and (min-width: 1665px) {
+    &.pricing-header {
+        background: url(../images/backgrounds/bg-pricing-header.jpg) no-repeat right center;
+        background-size: cover;
+    }
   }
 
   &.privacy-header {

@@ -253,12 +253,15 @@ jQuery(function($) {
   $('.pricing-toggle-button').on('click', function() {
     let volume = $("#priceVolume").val();
     if (!$(this).hasClass('active')) { $(this).addClass('active').siblings().removeClass('active'); }
+    $('#priceCaveat').html('');
     $('#calculatedPrice').html("£" + currentProSubPrice());
   });
 
   $('#priceVolume').on('click', function() {
     let volume = $("#priceVolume").val();
     $('#priceOutput').html(volume);
+    $('#priceCaveat').html('');
+    $('#planPrefix').html('Up to');
     $('#planPages').html(volume);
     $('#calculatedPrice').html("£" + currentProSubPrice());
   });
