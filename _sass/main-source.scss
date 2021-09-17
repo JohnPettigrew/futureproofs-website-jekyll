@@ -252,17 +252,23 @@ button {
 .owl-carousel {
   margin-top: 30px;
 
+  .job-title {
+    color: $dark-gray;
+  }
+
+  .testimonial-text {
+    top: 60px;
+  }
+
   .owl-nav {
-    position: relative;
-    top: -100px;
-    z-index: 200;
+    color: $mid-gray;
 
     .owl-prev {
-      left: 0px;
+      left: -20px;
     }
 
     .owl-next {
-      right: 100hw;
+      right: -20px;
     }
   }
 
@@ -2405,6 +2411,10 @@ a.dropdown-toggle::after {
       background: url(../images/backgrounds/bg-ethics-header.jpg) no-repeat;
   }
 
+  &.how-it-works-header {
+      background: url(../images/backgrounds/bg-how-it-works-header.jpg) no-repeat;
+  }
+
   &.legal-header {
       background: url(../images/backgrounds/bg-legal-header.jpg) no-repeat;
   }
@@ -2990,9 +3000,8 @@ iframe {
 /*----- Testimonial -----*/
 
 #testimonial-slider {
-  p {
-    color: $white;
-  }
+  margin-top: -90px;
+  margin-bottom: -20px;
 }
 
 .bg-testimonial,
@@ -3540,8 +3549,8 @@ h4.text-primary {
 
 /*----- Contact US -----*/
 
-section#stayconnect {
-    margin-top: -40px;
+section#contact-us {
+    margin-top: -60px;
 }
 
 .contactus-wrapp,
