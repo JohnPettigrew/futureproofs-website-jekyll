@@ -285,11 +285,14 @@ button {
   }
 
   .feature-box {
-    -webkit-box-shadow: 0 0 10px $light-gray;
-    box-shadow: 0 0 10px $light-gray;
-    overflow: hidden;
     margin-bottom: 30px;
     background-color: $white;
+    padding: 4.25rem 2.5rem;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid $light-gray;
+    overflow: hidden;
+    transition: color 0.3s ease-in 0.1s;
 
     &:hover {
       .overlay {
@@ -3334,7 +3337,7 @@ iframe {
     padding: 4.25rem 2.5rem;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    border: 1px solid #f1f1f1;
+    border: 1px solid $light-gray;
     overflow: hidden;
     text-align: justify;
     transition: color 0.3s ease-in 0.1s;
@@ -4199,26 +4202,21 @@ ul.rounded li::before {
 /*shop detail Tabs*/
 
 .tab-container {
-    border: 1px solid #d1d1d1;
-    padding: 2.5rem 1rem 0 1rem;
-    -webkit-border-radius: 0 0 5px 5px;
-    border-radius: 0 0 5px 5px;
+  padding: 4.25rem 2.5rem;
+  border: 1px solid $light-gray;
+  overflow: hidden;
+  transition: color 0.3s ease-in 0.1s;
+  -webkit-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+  line-height: 2;
 }
 
 .tab-container>p {
     margin-bottom: 0;
 }
 
-.tab-container .accordion-item+div>p {
-    margin-bottom: 1rem;
-}
-
 .tab-container p:last-child {
     margin-bottom: 0;
-}
-
-.accordion-item {
-    display: none !important;
 }
 
 /*Comments & Date*/
@@ -5468,8 +5466,7 @@ ul.links li a:focus,
 }
 
 @media (max-width: 360px) {
-    .tabset-list a,
-    .accordion-item a {
+    .tabset-list a {
         display: block;
         padding: 10px 1.3rem;
     }
