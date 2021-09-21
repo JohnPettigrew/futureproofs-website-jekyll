@@ -327,7 +327,8 @@ jQuery(function($) {
 
   $("#testimonial-slider").owlCarousel({
     items: 1,
-    autoplay: false,
+    autoplay: 2500,
+    smartSpeed: 2500,
     autoplayHoverPause: true,
     mouseDrag: false,
     loop: true,
