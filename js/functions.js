@@ -1,18 +1,4 @@
-/* ===================================
-    About
-====================================== */
-
-/*
-    Theme Name: Rakib
-    Theme URI:
-    Author: Abusayed Shuvo
-    Author URI:
-    Description: One Page , Multi Parallax Template
-    Tags: one page, multi page, multipurpose, parallax, creative, html5
-
- */
-
-//PAGE LOADER
+// Page loader
 $(window).on("load", function() {
   "use strict";
   $(".loader").fadeOut(800);
@@ -26,7 +12,7 @@ jQuery(function($) {
   let body = $("body");
   let $root = $("html, body");
 
-  /* ----- Back to Top ----- */
+  // Back to Top
   let amountScrolled = 700;
   let backBtn = $("a.back-top");
   $window.on("scroll", function() {
@@ -43,7 +29,7 @@ jQuery(function($) {
     return false;
   });
 
-  /* ------- Smooth scroll ------- */
+  // Smooth scroll
   $("a.pagescroll").on("click", function(event) {
     event.preventDefault();
     let action = $(this.hash).offset().top;
@@ -56,7 +42,7 @@ jQuery(function($) {
     }, 1200);
   });
 
-  /* ------- navbar menu Position dynamically ------- */
+  // Navbar menu position dynamically
   $(".dropdown").on("mouseenter", function() {
     let $elem = $(this).find('.dropdown-menu'),
       left = $elem.offset().left,
@@ -70,7 +56,7 @@ jQuery(function($) {
     }
   });
 
-  /*------ Sticky MENU Fixed ------*/
+  // Sticky menu Fixed
   let headerHeight = $("header").outerHeight();
   let navbar = $("nav.navbar");
   if (navbar.not('.fixed-bottom').hasClass("static-nav")) {
@@ -123,7 +109,8 @@ jQuery(function($) {
       }
     })
   }
-  /*Menu Onclick*/
+
+  // Menu onclick
   let sideMenuToggle = $("#sidemenu_toggle");
   let sideMenu = $(".side-menu");
   if (sideMenuToggle.length) {
@@ -164,18 +151,14 @@ jQuery(function($) {
       }
     });
   }
-  /*
-   * Side menu collapse opener
-   * */
+
+  // Side menu collapse opener
   $(".collapsePagesSideMenu").on('click', function() {
     $(this).find('.fas').toggleClass("rotate-180");
   });
 
 
-  /* =====================================
-   Parallax And responsive plugins initialize
-    ====================================== */
-  /*Wow Animations*/
+  // Parallax and responsive plugins
   if ($(".wow").length && $(window).outerWidth() >= 567) {
     let wow = new WOW({
       boxClass: 'wow',
@@ -211,9 +194,7 @@ jQuery(function($) {
     }
   });
 
-  /* =====================================
-               Pricing table
-     ===================================== */
+  // Pricing table
 
   function currentProSubPrice() {
     let value = 0;
@@ -252,7 +233,9 @@ jQuery(function($) {
 
   $('.pricing-toggle-button').on('click', function() {
     let volume = $("#priceVolume").val();
-    if (!$(this).hasClass('active')) { $(this).addClass('active').siblings().removeClass('active'); }
+    if (!$(this).hasClass('active')) {
+      $(this).addClass('active').siblings().removeClass('active');
+    }
     $('#priceCaveat').html('');
     $('#calculatedPrice').html("£" + currentProSubPrice());
   });
@@ -274,8 +257,7 @@ jQuery(function($) {
     $('.pricing-item.selected').addClass('active');
   });
 
-
-  /* ------ OWL Sliders ------ */
+  // OWL sliders
   $("#key-messages-slider").owlCarousel({
     autoplay: false,
     autoplayTimeout: 3000,
@@ -351,9 +333,7 @@ jQuery(function($) {
     }
   });
 
-  /* =====================================
-              Revolution Slider
-  ====================================== */
+  // Revolution slider
   $("#rev_main").show().revolution({
     sliderType: "standard",
     jsFileLocation: "js/revolution/",
@@ -430,6 +410,7 @@ jQuery(function($) {
       disableFocusListener: false,
     }
   });
+
   $("#rev_single").show().revolution({
     sliderType: "hero",
     jsFileLocation: "js/revolution",
@@ -466,5 +447,25 @@ jQuery(function($) {
       disableFocusListener: false
     }
   });
-  //    end of js
+
+  // Accordion for how-it-works page
+  $(function() { tabsToggle(); });
+
+  function tabsToggle() {
+    var animSpeed = 500;
+    var tabWrap = $(".tab-to-accordion");
+    var tabItem = tabWrap.find(".tab-container").children("div[id]");
+    tabItem.hide();
+    $('#tab1').show();
+    $(tabWrap).on("click", 'a[href^="#tab"]', function(e) {
+      e.preventDefault();
+      var $this = $(this);
+      var activeId = $this.attr("href");
+      var activeOpener = tabWrap.find('a[href="' + activeId + '"]');
+      $('a[href^="#tab"]').parent().removeClass("active");
+      activeOpener.parent().addClass("active");
+      tabItem.stop().slideUp(animSpeed);
+      $(activeId).stop().slideDown(animSpeed);
+    });
+  }
 });
