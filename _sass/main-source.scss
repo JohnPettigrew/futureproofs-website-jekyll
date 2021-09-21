@@ -246,21 +246,8 @@ button {
 
   .metric-boxes {
     article {
-      text-align: center;
-      padding: 0;
-
       .testimonial-wrapp {
         padding: 0;
-
-        .quoted {
-          i {
-            font-size: 150%;
-            color: $white;
-            display: inline-block;
-            position: relative;
-            top: 2px;
-          }
-        }
 
         #video-container {
           margin: 0 auto;
