@@ -3672,7 +3672,6 @@ section#contact-us {
     margin-top: -60px;
 }
 
-.contactus-wrapp,
 .getin_form .form-control,
 #map-container,
 .form-check,
@@ -3681,29 +3680,10 @@ section#contact-us {
     position: relative;
 }
 
-.contactus-wrapp {
-    padding: 2.5rem 2rem;
-    -webkit-transform: translateY(40px);
-    -moz-transform: translateY(40px);
-    -ms-transform: translateY(40px);
-    -o-transform: translateY(40px);
-    transform: translateY(40px);
-    z-index: 5;
-}
-.contactus-wrapp.position-absolute{
-    top: -180px;
-}
-
 .single-page-footer {
     margin-top: 0;
 }
 
-.single-page-footer .contactus-wrapp {
-    transform: translateY(0px);
-    background: #F1F1F1;
-}
-
-.contactus-wrapp,
 .getin_form .form-control,
 .form-check label::before,
 .form-check input[type="checkbox"]:checked+label::before {
