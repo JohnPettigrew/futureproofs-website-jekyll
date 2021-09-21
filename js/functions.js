@@ -140,7 +140,6 @@ jQuery(function($) {
           $("body").removeClass("overflow-hidden");
           sideMenu.removeClass("side-menu-active");
           $("#close_side_menu").fadeOut(200);
-          $tooltip.tooltipster('close');
           $(function() {
             setTimeout(function() {
               $('.sideNavPages').removeClass('show');

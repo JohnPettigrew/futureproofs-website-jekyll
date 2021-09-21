@@ -14,16 +14,6 @@ body {
     opacity: 0.63;
     color: $white;
 }
-.tooltipster-box {
-    background: rgba(2, 108, 184, 0.85) !important;
-    background: $primary !important;
-    opacity: 0.85;
-    border: none !important;
-    box-shadow: none;
-}
-.tooltipster-content{
-    color: $white !important;
-}
 
 table, tr, td, blockquote {
   color: $mid-gray;
@@ -3657,11 +3647,6 @@ h4.text-primary {
         transform: rotate(360deg);
     }
 }
-
-.fancybox-thumbs__list a:before {
-    border-color: $secondary;
-}
-
 
 /*----- Gallery ends -----*/
 
