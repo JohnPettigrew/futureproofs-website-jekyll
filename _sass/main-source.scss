@@ -262,8 +262,6 @@ button {
     }
   }
 
-  }
-
   .metric-boxes {
     article {
       .testimonial-wrapp {
@@ -2545,66 +2543,68 @@ a.dropdown-toggle::after {
 /*-----Page Headers----- */
 
 .page-header {
-  background-position: center center;
+  background-position: top center;
   -webkit-background-size: cover;
   background-size: cover;
-  background-attachment: fixed;
+  background-repeat: no-repeat;
   width: 100%;
 
   &.error-404-header {
-      background: url(../images/backgrounds/bg-404-header.jpg) no-repeat;
+      background-image: url(../images/backgrounds/bg-404-header.jpg);
   }
 
   &.about-header {
-      background: url(../images/backgrounds/bg-about-header.jpg) no-repeat;
+      background-image: url(../images/backgrounds/bg-about-header.jpg);
   }
 
   &.climate-header {
-      background: url(../images/backgrounds/bg-climate-header.jpg) no-repeat;
+      background-image: url(../images/backgrounds/bg-climate-header.jpg);
   }
 
   &.contact-header {
-      background: url(../images/backgrounds/bg-contact-header.jpg) no-repeat;
+      background-image: url(../images/backgrounds/bg-contact-header.jpg);
   }
 
   &.cookie-header {
-      background: url(../images/backgrounds/bg-cookie-header.jpg) no-repeat;
+      background-image: url(../images/backgrounds/bg-cookie-header.jpg);
   }
 
   &.customer-header {
-      background: url(../images/backgrounds/bg-customer-header.jpg) no-repeat;
+      background-image: url(../images/backgrounds/bg-customer-header.jpg);
   }
 
   &.ethics-header {
-      background: url(../images/backgrounds/bg-ethics-header.jpg) no-repeat;
+      background-image: url(../images/backgrounds/bg-ethics-header.jpg);
   }
 
   &.how-it-works-header {
-      background: url(../images/backgrounds/bg-how-it-works-header.jpg) no-repeat;
+      background-image: url(../images/backgrounds/bg-how-it-works-header.jpg);
   }
 
   &.legal-header {
-      background: url(../images/backgrounds/bg-legal-header.jpg) no-repeat;
+      background-image: url(../images/backgrounds/bg-legal-header.jpg);
   }
 
   &.pricing-header {
-      background: url(../images/backgrounds/bg-pricing-header.jpg) no-repeat right top;
-      background-size: cover;
+      background-image: url(../images/backgrounds/bg-pricing-header.jpg) right top;
   }
 
   &.testimonial-header {
-      background: url(../images/backgrounds/bg-testimonials-header.jpg);
-        background: url(../images/backgrounds/bg-pricing-header.jpg) no-repeat right center;
-        background-size: cover;
-  }
+      background-image: url(../images/backgrounds/bg-testimonials-header.jpg);
   }
 
-  &.privacy-header {
-      background: url(../images/backgrounds/bg-privacy-header.jpg) no-repeat;
+  h1, h2 {
+    text-shadow: 0 0 3px $dark-gray;
   }
 
-  &.testimonial-bg {
-      background: url(../images/backgrounds/testimonials-background.jpg) no-repeat;
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  @media screen and (min-width: 1665px) {
+    &.pricing-header {
+        background: url(../images/backgrounds/bg-pricing-header.jpg)right center;
+    }
   }
 }
 
