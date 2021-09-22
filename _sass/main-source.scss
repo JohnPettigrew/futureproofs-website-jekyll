@@ -242,6 +242,26 @@ button {
         transform: scale(60%);
       }
     }
+
+    &.tab-container {
+      padding: 4.25rem 2.5rem;
+      border: 1px solid $light-gray;
+      overflow: hidden;
+      transition: color 0.3s ease-in 0.1s;
+      -webkit-border-radius: 0 0 5px 5px;
+      border-radius: 0 0 5px 5px;
+      line-height: 2;
+
+      ul {
+        margin: 0;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   }
 
   .metric-boxes {
@@ -4170,26 +4190,6 @@ ul.rounded li::before {
     right: -25px;
 }
 
-
-/*shop detail Tabs*/
-
-.tab-container {
-  padding: 4.25rem 2.5rem;
-  border: 1px solid $light-gray;
-  overflow: hidden;
-  transition: color 0.3s ease-in 0.1s;
-  -webkit-border-radius: 0 0 5px 5px;
-  border-radius: 0 0 5px 5px;
-  line-height: 2;
-}
-
-.tab-container>p {
-    margin-bottom: 0;
-}
-
-.tab-container p:last-child {
-    margin-bottom: 0;
-}
 
 /*Comments & Date*/
 
