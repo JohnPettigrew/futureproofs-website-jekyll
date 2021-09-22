@@ -177,12 +177,10 @@ button {
           padding: 12px 1.75rem;
           color: $white;
           font-weight: 600;
-          -webkit-border-radius: 23px;
-          border-radius: 23px;
+          -webkit-border-radius: 23px 23px 0 0;
+          border-radius: 23px 23px 0 0;
           line-height: normal;
           text-decoration: none;
-          border-bottom-left-radius: 0;
-          border-bottom-right-radius: 0;
           background: $mid-gray;
           cursor: pointer;
         }
@@ -190,6 +188,14 @@ button {
         &.active > a {
           background: $secondary;
           cursor: default;
+        }
+
+        @media (max-width: 424px) {
+          a {
+            padding: 0.7rem;
+            -webkit-border-radius: 23px 23px 0 0;
+            border-radius: 23px 23px 0 0;
+          }
         }
       }
     }
