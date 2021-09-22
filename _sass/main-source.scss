@@ -2594,12 +2594,13 @@ a.dropdown-toggle::after {
       background-image: url(../images/backgrounds/bg-testimonials-header.jpg);
   }
 
-  h1, h2 {
+  h1 {
     text-shadow: 0 0 5px $darkest-gray;
   }
 
   h2 {
     font-size: 1.5rem;
+    text-shadow: 0 0 2px $darkest-gray;
   }
 
   @media screen and (min-width: 1665px) {
