@@ -218,6 +218,13 @@ button {
   }
 
   div {
+    &#main-message {
+      .image img {
+          width: 333px;
+          height: 400px;
+      }
+    }
+
     &.cambridge-climate-charter {
       width: 600px;
       margin: 30px auto;
