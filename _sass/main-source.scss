@@ -1675,6 +1675,7 @@ ul.links li a::before,
 
 .transparent-bg.text-primary .navbar-nav .nav-link {
     color: $darkest-gray;
+    text-shadow: 0 0 3px $white;
 }
 
 .transparent-bg.text-primary .navbar-nav .nav-link.active {
@@ -2594,7 +2595,7 @@ a.dropdown-toggle::after {
   }
 
   h1, h2 {
-    text-shadow: 0 0 3px $dark-gray;
+    text-shadow: 0 0 5px $darkest-gray;
   }
 
   h2 {
