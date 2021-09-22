@@ -2591,7 +2591,8 @@ a.dropdown-toggle::after {
   }
 
   &.pricing-header {
-      background-image: url(../images/backgrounds/bg-pricing-header.jpg) right top;
+      background-image: url(../images/backgrounds/bg-pricing-header.jpg);
+      background-position: top right;
   }
 
   &.testimonial-header {
@@ -2609,7 +2610,8 @@ a.dropdown-toggle::after {
 
   @media screen and (min-width: 1665px) {
     &.pricing-header {
-        background: url(../images/backgrounds/bg-pricing-header.jpg)right center;
+        background-image: url(../images/backgrounds/bg-pricing-header.jpg);
+        background-position: right center ;
     }
   }
 }
