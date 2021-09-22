@@ -2572,11 +2572,11 @@ a.dropdown-toggle::after {
       background-size: cover;
   }
 
-  @media screen and (min-width: 1665px) {
-    &.pricing-header {
+  &.testimonial-header {
+      background: url(../images/backgrounds/bg-testimonials-header.jpg);
         background: url(../images/backgrounds/bg-pricing-header.jpg) no-repeat right center;
         background-size: cover;
-    }
+  }
   }
 
   &.privacy-header {
