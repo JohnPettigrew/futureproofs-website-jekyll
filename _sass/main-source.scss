@@ -1646,10 +1646,15 @@ ul.links li a::before,
     font-weight: 500;
     font-size: 14px;
     color: $darkest-gray;
+    text-shadow: 0 0 2px $white;
     position: relative;
     line-height: normal;
     margin: 16px 1.25rem;
     display: inline-block;
+
+    .navbar-dark & {
+      text-shadow: none;
+    }
 }
 
 .nav-item.dropdown:hover {
@@ -1675,7 +1680,6 @@ ul.links li a::before,
 
 .transparent-bg.text-primary .navbar-nav .nav-link {
     color: $darkest-gray;
-    text-shadow: 0 0 3px $white;
 }
 
 .transparent-bg.text-primary .navbar-nav .nav-link.active {
