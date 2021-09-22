@@ -2547,6 +2547,10 @@ a.dropdown-toggle::after {
 
 /*-----Page Headers----- */
 
+@mixin text-with-2px-dark-shadow {
+  text-shadow: 0 0 2px $darkest-gray;
+}
+
 .page-header {
   background-position: top center;
   -webkit-background-size: cover;
@@ -2596,7 +2600,18 @@ a.dropdown-toggle::after {
   }
 
   &.testimonial-header {
-      background-image: url(../images/backgrounds/bg-testimonials-header.jpg);
+      background-image: url(../images/backgrounds/bg-customer-header.jpg);
+
+      h2 {
+        font-size: 3rem;
+        @include text-with-2px-dark-shadow;
+      }
+
+      span {
+        font-size: 1.8rem;
+        font-weight: lighter;
+        @include text-with-2px-dark-shadow;
+      }
   }
 
   h1 {
@@ -2605,7 +2620,7 @@ a.dropdown-toggle::after {
 
   h2 {
     font-size: 1.5rem;
-    text-shadow: 0 0 2px $darkest-gray;
+    @include text-with-2px-dark-shadow;
   }
 
   @media screen and (min-width: 1665px) {
