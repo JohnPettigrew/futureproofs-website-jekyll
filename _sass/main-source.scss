@@ -2603,13 +2603,8 @@ a.dropdown-toggle::after {
       background-image: url(../images/backgrounds/bg-customer-header.jpg);
 
       h2 {
-        font-size: 3rem;
-        @include text-with-2px-dark-shadow;
-      }
-
-      span {
-        font-size: 1.8rem;
-        font-weight: lighter;
+        font-size: 2.5rem;
+        font-weight: bolder;
         @include text-with-2px-dark-shadow;
       }
   }

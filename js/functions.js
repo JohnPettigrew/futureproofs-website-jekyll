@@ -281,8 +281,7 @@ jQuery(function($) {
 
   $("#customers-slider").owlCarousel({
     items: 4,
-    autoplay: 2500,
-    smartSpeed: 2500,
+    autoplay: false,
     autoplayHoverPause: true,
     slideBy: 1,
     loop: true,
