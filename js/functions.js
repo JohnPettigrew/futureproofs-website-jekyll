@@ -58,57 +58,23 @@ jQuery(function($) {
 
   // Sticky menu Fixed
   let headerHeight = $("header").outerHeight();
-  let navbar = $("nav.navbar");
-  if (navbar.not('.fixed-bottom').hasClass("static-nav")) {
-    $window.scroll(function() {
-      let $scroll = $window.scrollTop();
-      let $navbar = $(".static-nav");
-      let nextSection = $(".section-nav-smooth");
-      if ($scroll > 250) {
-        $navbar.addClass("fixedmenu");
-        nextSection.css("margin-top", headerHeight);
-      } else {
-        $navbar.removeClass("fixedmenu");
-        nextSection.css("margin-top", 0);
-      }
-      if ($scroll > 125) {
-        $('.header-with-topbar nav').addClass('mt-0');
-      } else {
-        $('.header-with-topbar nav').removeClass('mt-0');
-      }
-    });
-    $(function() {
-      if ($window.scrollTop() >= $(window).height()) {
-        $(".static-nav").addClass('fixedmenu');
-      }
-    })
-  }
-  if (navbar.hasClass("fixed-bottom")) {
-    let navTopMargin = $(".fixed-bottom").offset().top;
-    let scrollTop = $window.scrollTop();
-    $(window).scroll(function() {
-      if ($(window).scrollTop() > navTopMargin) {
-        $('.fixed-bottom').addClass('fixedmenu');
-      } else {
-        $('.fixed-bottom').removeClass('fixedmenu');
-      }
-      if ($(window).scrollTop() < 260) {
-        $('.fixed-bottom').addClass('menu-top');
-      } else {
-        $('.fixed-bottom').removeClass('menu-top');
-      }
-    });
-    $(function() {
-      if (scrollTop < 230) {
-        $('.fixed-bottom').addClass('menu-top');
-      } else {
-        $('.fixed-bottom').removeClass('menu-top');
-      }
-      if (scrollTop >= $(window).height()) {
-        $('.fixed-bottom').addClass('fixedmenu');
-      }
-    })
-  }
+  $window.scroll(function() {
+    let $scroll = $window.scrollTop();
+    let $navbar = $(".static-nav");
+    let nextSection = $(".section-nav-smooth");
+    if ($scroll > 75) {
+      $navbar.addClass("fixedmenu");
+      nextSection.css("margin-top", headerHeight);
+    } else {
+      $navbar.removeClass("fixedmenu");
+      nextSection.css("margin-top", 0);
+    }
+  });
+  $(function() {
+    if ($window.scrollTop() >= $(window).height()) {
+      $(".static-nav").addClass('fixedmenu');
+    }
+  })
 
   // Menu onclick
   let sideMenuToggle = $("#sidemenu_toggle");

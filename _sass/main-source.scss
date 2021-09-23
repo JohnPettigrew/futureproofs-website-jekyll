@@ -1017,7 +1017,21 @@ ul.links li a::before,
     margin: 10px 0;
     padding: 0;
     width: 200px;
+    height: 40px;
     position: relative;
+    background-image: url('../images/futureproofs-logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left;
+    z-index: 201;
+
+    .navbar-dark & {
+      background-image: url('../images/futureproofs-logo-light.svg');
+    }
+
+    .fixedmenu & {
+      background-image: url('../images/futureproofs-logo.svg');
+    }
 }
 
 .navbar-brand.center-brand {
