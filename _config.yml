@@ -9,10 +9,8 @@ url: "https://www.wearefutureproofs.com"
 twitter_username: john_pettigrew
 github_username:  johnpettigrew
 
-# Build settings
-# theme: minima
-# plugins:
-#   - jekyll-feed
+plugins:
+  - jekyll-gzip
 
 sass:
   load_paths:
