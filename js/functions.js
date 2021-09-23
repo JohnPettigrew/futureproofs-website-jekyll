@@ -143,21 +143,7 @@ jQuery(function($) {
     $(".parallax.parallax-slow").parallaxie({
       speed: 0.31,
     });
-  } else if ($(window).width() < 576) {
-    $('#pagepiling #submit_btn').on('click', function() {
-      $('#pagepiling #result').remove();
-    });
-    $('#pagepiling .para-opacity').addClass('opacity-5');
-  } else {
-    $('#pagepiling .para-opacity').removeClass('opacity-5');
   }
-  $(window).resize(function() {
-    if ($(window).width() < 576) {
-      $('#pagepiling .para-opacity').addClass('opacity-5');
-    } else {
-      $('#pagepiling .para-opacity').removeClass('opacity-5');
-    }
-  });
 
   // Pricing table
 
