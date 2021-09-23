@@ -1040,8 +1040,8 @@ section,
     border-top-color: $primary;
     border-left-color: $primary;
     border-radius: 50%;
-    -webkit-animation: spin 1.5s linear infinite;
-    animation: spin 1.5s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
 }
 
 .loader-spinner::before {
@@ -1055,8 +1055,8 @@ section,
     border-top-color: $secondary;
     border-left-color: $secondary;
     border-radius: 50%;
-    -webkit-animation: spinBack 1s linear infinite;
-    animation: spinBack 1s linear infinite;
+    -webkit-animation: spinBack .5s linear infinite;
+    animation: spinBack .5s linear infinite;
 }
 
 @-webkit-keyframes spin {
@@ -1088,8 +1088,8 @@ section,
         transform: rotate(0deg);
     }
     to {
-        -webkit-transform: rotate(-720deg);
-        transform: rotate(-720deg);
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
     }
 }
 
@@ -1099,8 +1099,8 @@ section,
         transform: rotate(0deg);
     }
     to {
-        -webkit-transform: rotate(-720deg);
-        transform: rotate(-720deg);
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
     }
 }
 
