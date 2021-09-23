@@ -2,55 +2,10 @@
   <nav class="navbar navbar-dark navbar-expand-lg transparent-bg static-nav">
     {% include _navbar_internals.html %}
 
-    <!--side menu open button-->
-    <a href="javascript:void(0)" class="d-inline-block sidemenu_btn" id="sidemenu_toggle">
+    <a href="javascript:void(0)" class="d-inline-block sidemenu_btn" id="sidemenu_toggle" aria-label="Open sidebar menu">
       <span></span> <span></span> <span></span>
     </a>
   </nav>
-  <!-- side menu -->
-  <div class="side-menu opacity-0 bg-secondary">
-    <div class="overlay"></div>
-    <div class="inner-wrapper">
-      <span class="btn-close" id="btn_sideNavClose"><i></i><i></i></span>
-      <nav class="side-nav w-100">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="how-it-works.html">How it works</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="climate-positive.html">Climate positive</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pricing.html">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link collapsePagesSideMenu" data-toggle="collapse" href="#sideNavPages1">
-              More <i class="fas fa-chevron-down"></i>
-            </a>
-            <div id="sideNavPages1" class="collapse sideNavPages">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="customers.html">Our customers say&hellip;</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="success.html">Measuring success</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="https://help.futureproofs.net">Help and support</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="about.html">About us</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact us</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  <div id="close_side_menu" class="tooltip"></div>
-  <!-- End side menu -->
+
+  {% include _sidebar_menu.html %}
 </header>
