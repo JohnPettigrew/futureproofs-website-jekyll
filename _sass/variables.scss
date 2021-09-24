@@ -62,3 +62,12 @@ $font-family-fontawesome:
   "Font Awesome 5 Free",
   // Basic web fallback
   serif;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1665px
+);

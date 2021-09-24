@@ -219,7 +219,7 @@ body {
           cursor: default;
         }
 
-        @media (max-width: 424px) {
+        @media (max-width: 360px) {
           a {
             padding: 0.7rem;
             -webkit-border-radius: 23px 23px 0 0;
@@ -473,6 +473,13 @@ body {
 
   .testimonial-text {
     top: 60px;
+
+    @media (max-width: map-get($grid-breakpoints, 'lg')) {
+      & {
+        top: 0;
+        margin-top: 60px;
+      }
+    }
   }
 
   .owl-nav {
@@ -1083,7 +1090,8 @@ ul.links li a::before {
     color: $white !important;
 }
 
-@media screen and (min-width: 992px) {
+
+@media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
     .navbar-nav .dropdown {
         position: static;
     }
@@ -1369,17 +1377,7 @@ ul.links li a::before {
     margin-bottom: 0;
 }
 
-@media (max-width: 1200px) {
-    .side-menu .inner-wrapper {
-        padding: 4rem 3.25rem;
-    }
-    .process-wrapp li::before,
-    .process-wrapp li::after {
-        width: 26% !important;
-    }
-}
-
-@media (max-width: 1024px) {
+@media (max-width: map-get($grid-breakpoints, 'xl')) {
     .side-menu .inner-wrapper {
         padding: 4rem 2.7rem;
     }
@@ -1392,9 +1390,13 @@ ul.links li a::before {
     .sideNavPagesInner .nav-link {
         font-size: 1rem !important;
     }
+    .process-wrapp li::before,
+    .process-wrapp li::after {
+        width: 26% !important;
+    }
 }
 
-@media (max-width: 992px) {
+@media (max-width: map-get($grid-breakpoints, 'lg')) {
     .transparent-bg:not(.fixedmenu) {
         background: rgba(38, 49, 60, 0.55);
         padding: 0;
@@ -1432,7 +1434,7 @@ ul.links li a::before {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: map-get($grid-breakpoints, 'md')) {
     .side-menu .btn-close {
         top: 26px;
     }
@@ -1448,7 +1450,7 @@ ul.links li a::before {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: map-get($grid-breakpoints, 'sm')) {
     .side-menu .inner-wrapper {
         padding: 2rem 5rem;
     }
@@ -1740,7 +1742,7 @@ ul.links li a::before {
     @include text-with-2px-dark-shadow;
   }
 
-  @media screen and (min-width: 1665px) {
+  @media screen and (min-width: map-get($grid-breakpoints, 'xxl')) {
     &.pricing-header {
         background-image: url(../images/backgrounds/bg-pricing-header.jpg);
         background-position: right center ;
@@ -2119,7 +2121,7 @@ ul.links li a::before {
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: map-get($grid-breakpoints, 'lg')) {
     .process-wrapp {
         text-align: center;
     }
@@ -2138,7 +2140,7 @@ ul.links li a::before {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: map-get($grid-breakpoints, 'md')) {
     #key-messages-slider {
         margin: -70px 0 0;
     }
@@ -2221,7 +2223,7 @@ ul.links li a::before {
     z-index: 5;
 }
 
-@media (max-width: 992px) {
+@media (max-width: map-get($grid-breakpoints, 'lg')) {
     #testimonial-slider .owl-nav {
         position: absolute;
         top: 50%;
@@ -2768,7 +2770,7 @@ button {
   transform: scale(1);
 }
 
-@media (max-width:992px) {
+@media (max-width: map-get($grid-breakpoints, 'lg')) {
   .pricing-item .pricing-currency {
     font-size: 2.5rem;
   }
@@ -2788,7 +2790,7 @@ button {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: map-get($grid-breakpoints, 'md')) {
   .price-toggle-wrapper {
     .pricing-toggle-button {
       padding: 10px 40px;
@@ -2801,7 +2803,7 @@ button {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: map-get($grid-breakpoints, 'sm')) {
   .price-toggle-wrapper {
     .pricing-toggle-button {
       padding: 10px 30px;
@@ -2872,37 +2874,7 @@ ul.links li a:focus,
     color: $secondary;
 }
 
-@media (max-width: 1400px) {
-    html {
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 1266px) {
-    html {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 1024px) {
-    h2 {
-        font-size: 2.75rem;
-    }
-    h3 {
-        font-size: 1.375rem;
-    }
-    h2.heading-title-small {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 992px) {
-    h2 {
-        font-size: 2.5rem;
-    }
-    p {
-        font-size: 13px;
-    }
+@media (max-width: map-get($grid-breakpoints, 'lg')) {
     .navbar-expand-lg>.container,
     .navbar-expand-lg>.container-fluid {
         padding-right: 15px;
@@ -2916,7 +2888,7 @@ ul.links li a:focus,
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: map-get($grid-breakpoints, 'md')) {
     .revicon {
         display: none;
         visibility: hidden;
@@ -2940,10 +2912,7 @@ ul.links li a:focus,
     }
 }
 
-@media (max-width: 576px) {
-    html {
-        font-size: 13px;
-    }
+@media (max-width: map-get($grid-breakpoints, 'sm')) {
     .container {
         max-width: 98% !important;
     }
@@ -2967,15 +2936,6 @@ ul.links li a:focus,
     }
     .sidemenu_btn {
         margin-right: 0;
-    }
-}
-
-@media (max-width: 424px) {
-    .side-menu .btn-close {
-        margin-right: 0.7rem;
-    }
-    #key-messages-slider .message-box>span {
-        padding-top: 0.5rem;
     }
 }
 
