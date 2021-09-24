@@ -115,6 +115,22 @@ body {
   }
 }
 
+.rev_slider_wrapper {
+  height: 100vh !important;
+  width: 100vw;
+
+  #rev_main {
+    height: 100vh !important;
+    width: 100vw;
+
+    @media (max-width: map-get($grid-breakpoints, 'sm')) {
+      h2 {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+
 #single-column-page {
   padding-top: 7.5rem;
   padding-bottom: 3.75rem;

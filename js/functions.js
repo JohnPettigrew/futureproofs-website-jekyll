@@ -287,7 +287,7 @@ jQuery(function($) {
   $("#rev_main").show().revolution({
     sliderType: "standard",
     jsFileLocation: "js/revolution/",
-    sliderLayout: "fullscreen",
+    sliderLayout: "auto",
     dottedOverlay: "none",
     delay: 9000,
     navigation: {
@@ -308,7 +308,7 @@ jQuery(function($) {
         hide_onmobile: true,
         style: "numbered",
         hide_onleave: false,
-        hide_under: 767,
+        hide_under: 576,
         direction: "vertical",
         h_align: "left",
         v_align: "center",
@@ -328,10 +328,8 @@ jQuery(function($) {
       visible_area: "80%",
       presize: false
     },
-    responsiveLevels: [1240, 1024, 778, 480],
-    visibilityLevels: [1240, 1024, 778, 480],
-    gridwidth: [1140, 1024, 768, 480],
-    gridheight: [660, 650, 600, 490],
+    responsiveLevels: [1200, 992, 768, 576],
+    visibilityLevels: [1200, 992, 768, 576],
     lazyType: "none",
     parallax: {
       type: "mouse",
@@ -358,43 +356,6 @@ jQuery(function($) {
       simplifyAll: "off",
       nextSlideOnWindowFocus: "off",
       disableFocusListener: false,
-    }
-  });
-
-  $("#rev_single").show().revolution({
-    sliderType: "hero",
-    jsFileLocation: "js/revolution",
-    sliderLayout: "fullscreen",
-    scrollbarDrag: "true",
-    dottedOverlay: "none",
-    delay: 9000,
-    navigation: {},
-    responsiveLevels: [1240, 1024, 778, 480],
-    visibilityLevels: [1240, 1024, 778, 480],
-    gridwidth: [1170, 1024, 778, 480],
-    gridheight: [868, 768, 960, 720],
-    lazyType: "none",
-    parallax: {
-      type: "scroll",
-      origo: "slidercenter",
-      speed: 400,
-      levels: [10, 15, 20, 25, 30, 35, 40, -10, -15, -20, -25, -30, -35, -40, -45, 55]
-    },
-    shadow: 0,
-    spinner: "off",
-    autoHeight: "off",
-    fullScreenAutoWidth: "off",
-    fullScreenAlignForce: "off",
-    fullScreenOffsetContainer: "",
-    disableProgressBar: "on",
-    hideThumbsOnMobile: "off",
-    hideSliderAtLimit: 0,
-    hideCaptionAtLimit: 0,
-    hideAllCaptionAtLilmit: 0,
-    debugMode: false,
-    fallbacks: {
-      simplifyAll: "off",
-      disableFocusListener: false
     }
   });
 
