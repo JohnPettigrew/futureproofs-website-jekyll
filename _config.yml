@@ -1,9 +1,8 @@
 title: Futureproofs
 email: info@wearefutureproofs.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Communication, on-screen proofing and editorial project management software
+  for people and team who create high-quality illustrated books.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.wearefutureproofs.com"
 twitter_username: john_pettigrew
