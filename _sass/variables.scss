@@ -2,15 +2,16 @@ $white: #ffffff;
 $black: #1c1c1b;
 $red: #cd0000;
 $green: #0f9948;
-$blue: #3f91ce;
+$blue: #2f7db7;
 $orange: #f0850e;
 
 $light-gray: #ecf0f1;
 $mid-gray: #8a8a8a;
 $dark-gray: #575757;
-$darkest-gray: #191919;
+$darkest-gray: #26313c;
 
-$mid-orange: #f8d385;
+$mid-orange: lighten($orange, 16%);
+$mid-dark-orange: lighten($orange, 8%);
 $light-orange: #fdf3e6;
 $mid-blue: lighten($blue, 25%);
 $light-blue: #d9e9f5;
@@ -22,9 +23,9 @@ $info: $blue;
 
 $light: $light-gray;
 
-$font-size-base: 1.1rem;
+$font-size-base: 1 rem;
 
-$font-family-sans-serif:
+$font-family-body:
   // Our preferred web font
   "Lato",
   // Safari for macOS and iOS (San Francisco)
@@ -39,3 +40,34 @@ $font-family-sans-serif:
   "Helvetica Neue", Arial, sans-serif,
   // Emoji fonts
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+$font-family-heading:
+  // Our preferred web font
+  "Montserrat",
+  // Safari for macOS and iOS (San Francisco)
+  -apple-system,
+  // Chrome < 56 for macOS (San Francisco)
+  BlinkMacSystemFont,
+  // Windows
+  "Segoe UI",
+  // Android
+  "Roboto",
+  // Basic web fallback
+  "Helvetica Neue", Arial, sans-serif,
+  // Emoji fonts
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+$font-family-fontawesome:
+  // Our preferred web font
+  "Font Awesome 5 Free",
+  // Basic web fallback
+  serif;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1665px
+);

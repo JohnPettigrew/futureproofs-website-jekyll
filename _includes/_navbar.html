@@ -1,36 +1,11 @@
-<header class="section page-header">
-  <nav class="navbar-outer">
-    <div class="navbar navbar-expand-md fixed-top row">
-      <!-- Logo -->
-      <a class="navbar-brand" href="/"><img src="/images/futureproofs-logo.svg"></a>
-      <!-- Links -->
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/features.html">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/pricing.html">Pricing</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">More</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="climate-positive.html">Climate positive</a>
-              <a class="dropdown-item" href="/success.html">Measuring success</a>
-              <a class="dropdown-item" href="/customers.html">Customer stories</a>
-              <a class="dropdown-item" href="/contact.html">Contact us</a>
-            </div>
-          </li>
-        </ul>
-        <!-- <a class="btn btn-primary text-white ml-4 try-it-out" href="https://www.futureproofs.net">Try it out</a> -->
-      </div>
-      <!-- Collapse -->
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <img class="text-dark" src="/images/list.svg">
-      </button>
-    </div>
+<header class="site-header" id="header">
+  <nav class="navbar navbar-expand-lg transparent-bg text-primary static-nav">
+    {% include _navbar_internals.html %}
+
+    <a href="javascript:void(0)" class="d-inline-block sidemenu_btn" id="sidemenu_toggle" aria-label="Open sidebar menu">
+      <span></span> <span></span> <span></span>
+    </a>
   </nav>
+
+  {% include _sidebar_menu.html %}
 </header>
