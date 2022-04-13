@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-GB" }}">
   {% include _head.html %}
-
   <body>
+    <div class="loader">
+      <div class="loader-spinner"></div>
+    </div>
+
     {% include _navbar.html %}
 
     {{ content}}
-
-    {% include _testimonials.html %}
 
     {% include _footer.html %}
     {% include _common_scripts.html %}

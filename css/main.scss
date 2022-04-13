@@ -1,6 +1,9 @@
 ---
 ---
 
+@import "vendor/bundle.min";
 @import "variables";
-@import "bootstrap/scss/bootstrap";
-@import "main";
+@import "vendor/owl.carousel.min";
+@import "vendor/revolution-settings.min";
+@import "vendor/wow";
+@import "main-source";
